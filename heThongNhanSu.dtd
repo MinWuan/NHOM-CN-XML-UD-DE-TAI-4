@@ -1,0 +1,123 @@
+<!ELEMENT HE_THONG_NHAN_SU (BANG_LUONG, CHAM_CONG, CHUC_VU, DU_AN, NHAN_VIEN, PHONG_BAN, QTLV, THAM_GIA_DU_AN)>
+
+<!-- Bảng lương -->
+<!ELEMENT BANG_LUONG (
+    ma_bang_luong,
+    ma_qtlv,
+    ma_cham_cong,
+    thang,
+    nam,
+    luong_co_ban,
+    phu_cap,
+    tien_tang_ca,
+    tong_luong
+)>
+<!ELEMENT ma_bang_luong (#PCDATA)>
+<!ELEMENT ma_qtlv (#PCDATA)>
+<!ELEMENT ma_cham_cong (#PCDATA)>
+<!ELEMENT thang (#PCDATA)>
+<!ELEMENT nam (#PCDATA)>
+<!ELEMENT luong_co_ban (#PCDATA)>
+<!ELEMENT phu_cap (#PCDATA)>
+<!ELEMENT tien_tang_ca (#PCDATA)>
+<!ELEMENT tong_luong (#PCDATA)>
+
+<!-- Chấm công -->
+<!ELEMENT CHAM_CONG (
+    ma_cham_cong,
+    ma_qtlv,
+    thang,
+    nam,
+    so_ngay_cong,
+    so_gio_tang_ca
+)>
+<!ELEMENT ma_cham_cong (#PCDATA)>
+<!ELEMENT ma_qtlv (#PCDATA)>
+<!ELEMENT thang (#PCDATA)>
+<!ELEMENT nam (#PCDATA)>
+<!ELEMENT so_ngay_cong (#PCDATA)>
+<!ELEMENT so_gio_tang_ca (#PCDATA)>
+
+<!-- Chức vụ -->
+<!ELEMENT CHUC_VU (
+    ma_chuc_vu,
+    ten_chuc_vu,
+    luong_co_ban
+)>
+<!ELEMENT ma_chuc_vu (#PCDATA)>
+<!ELEMENT ten_chuc_vu (#PCDATA)>
+<!ELEMENT luong_co_ban (#PCDATA)>
+
+<!-- Dự án -->
+<!ELEMENT DU_AN (
+    ma_du_an,
+    ten_du_an,
+    ngay_bat_dau,
+    ngay_ket_thuc,
+    mo_ta
+)>
+<!ELEMENT ma_du_an (#PCDATA)>
+<!ELEMENT ten_du_an (#PCDATA)>
+<!ELEMENT ngay_bat_dau (#PCDATA)>
+<!ELEMENT ngay_ket_thuc (#PCDATA)>
+<!ELEMENT mo_ta (#PCDATA)>
+
+<!-- Nhân viên -->
+<!ELEMENT NHAN_VIEN (
+    ma_nhan_vien,
+    ho_ten,
+    ngay_sinh,
+    gioi_tinh,
+    dia_chi,
+    so_dien_thoai,
+    email
+)>
+<!ELEMENT ma_nhan_vien (#PCDATA)>
+<!ELEMENT ho_ten (#PCDATA)>
+<!ELEMENT ngay_sinh (#PCDATA)>
+<!ELEMENT gioi_tinh (#PCDATA)>
+<!ELEMENT dia_chi (#PCDATA)>
+<!ELEMENT so_dien_thoai (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!-- Phòng ban -->
+<!ELEMENT PHONG_BAN (
+    ma_phong_ban,
+    ten_phong_ban,
+    dia_chi,
+    so_dien_thoai
+)>
+<!ELEMENT ma_phong_ban (#PCDATA)>
+<!ELEMENT ten_phong_ban (#PCDATA)>
+<!ELEMENT dia_chi (#PCDATA)>
+<!ELEMENT so_dien_thoai (#PCDATA)>
+
+<!-- Quá trình làm việc -->
+<!ELEMENT QTLV (
+    ma_qtlv,
+    ma_nhan_vien,
+    ma_phong_ban,
+    ma_chuc_vu,
+    ngay_bat_dau,
+    ngay_ket_thuc
+)>
+<!ELEMENT ma_qtlv (#PCDATA)>
+<!ELEMENT ma_nhan_vien (#PCDATA)>
+<!ELEMENT ma_phong_ban (#PCDATA)>
+<!ELEMENT ma_chuc_vu (#PCDATA)>
+<!ELEMENT ngay_bat_dau (#PCDATA)>
+<!ELEMENT ngay_ket_thuc (#PCDATA)>
+
+<!-- Tham gia dự án -->
+<!ELEMENT THAM_GIA_DU_AN (
+    ma_tgda,
+    ma_nhan_vien,
+    ma_du_an,
+    vai_tro,
+    so_gio_tham_gia
+)>
+<!ELEMENT ma_tgda (#PCDATA)>
+<!ELEMENT ma_nhan_vien (#PCDATA)>
+<!ELEMENT ma_du_an (#PCDATA)>
+<!ELEMENT vai_tro (#PCDATA)>
+<!ELEMENT so_gio_tham_gia (#PCDATA)>
