@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HE_THONG_NHAN_SU SYSTEM "heThongNhanSu.dtd">
+
+<HE_THONG_NHAN_SU>
+
+
+    <BANG_LUONG>
+        <ma_bang_luong>1</ma_bang_luong>
+        <ma_qtlv>1</ma_qtlv>
+        <ma_cham_cong>1</ma_cham_cong>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <luong_co_ban>9000000</luong_co_ban>
+        <phu_cap>1000000</phu_cap>
+        <tien_tang_ca>500000</tien_tang_ca>
+        <tong_luong>10500000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+        <ma_bang_luong>2</ma_bang_luong>
+        <ma_qtlv>2</ma_qtlv>
+        <ma_cham_cong>2</ma_cham_cong>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <luong_co_ban>10000000</luong_co_ban>
+        <phu_cap>800000</phu_cap>
+        <tien_tang_ca>300000</tien_tang_ca>
+        <tong_luong>11100000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+        <ma_bang_luong>3</ma_bang_luong>
+        <ma_qtlv>3</ma_qtlv>
+        <ma_cham_cong>3</ma_cham_cong>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <luong_co_ban>11000000</luong_co_ban>
+        <phu_cap>500000</phu_cap>
+        <tien_tang_ca>200000</tien_tang_ca>
+        <tong_luong>11700000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+        <ma_bang_luong>4</ma_bang_luong>
+        <ma_qtlv>4</ma_qtlv>
+        <ma_cham_cong>4</ma_cham_cong>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <luong_co_ban>12000000</luong_co_ban>
+        <phu_cap>600000</phu_cap>
+        <tien_tang_ca>400000</tien_tang_ca>
+        <tong_luong>13000000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+        <ma_bang_luong>5</ma_bang_luong>
+        <ma_qtlv>5</ma_qtlv>
+        <ma_cham_cong>5</ma_cham_cong>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <luong_co_ban>15000000</luong_co_ban>
+        <phu_cap>2000000</phu_cap>
+        <tien_tang_ca>600000</tien_tang_ca>
+        <tong_luong>17600000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+        <ma_bang_luong>6</ma_bang_luong>
+        <ma_qtlv>6</ma_qtlv>
+        <ma_cham_cong>6</ma_cham_cong>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <luong_co_ban>5000000</luong_co_ban>
+        <phu_cap>200000</phu_cap>
+        <tien_tang_ca>100000</tien_tang_ca>
+        <tong_luong>5300000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+        <ma_bang_luong>7</ma_bang_luong>
+        <ma_qtlv>7</ma_qtlv>
+        <ma_cham_cong>7</ma_cham_cong>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <luong_co_ban>16000000</luong_co_ban>
+        <phu_cap>1500000</phu_cap>
+        <tien_tang_ca>800000</tien_tang_ca>
+        <tong_luong>18300000</tong_luong>
+    </BANG_LUONG>
+
+
+    <CHAM_CONG>
+        <ma_cham_cong>1</ma_cham_cong>
+        <ma_qtlv>1</ma_qtlv>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <so_ngay_cong>22</so_ngay_cong>
+        <so_gio_tang_ca>5</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+        <ma_cham_cong>2</ma_cham_cong>
+        <ma_qtlv>2</ma_qtlv>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <so_ngay_cong>21</so_ngay_cong>
+        <so_gio_tang_ca>3</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+        <ma_cham_cong>3</ma_cham_cong>
+        <ma_qtlv>3</ma_qtlv>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <so_ngay_cong>23</so_ngay_cong>
+        <so_gio_tang_ca>2</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+        <ma_cham_cong>4</ma_cham_cong>
+        <ma_qtlv>4</ma_qtlv>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <so_ngay_cong>24</so_ngay_cong>
+        <so_gio_tang_ca>4</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+        <ma_cham_cong>5</ma_cham_cong>
+        <ma_qtlv>5</ma_qtlv>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <so_ngay_cong>22</so_ngay_cong>
+        <so_gio_tang_ca>6</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+        <ma_cham_cong>6</ma_cham_cong>
+        <ma_qtlv>6</ma_qtlv>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <so_ngay_cong>20</so_ngay_cong>
+        <so_gio_tang_ca>1</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+        <ma_cham_cong>7</ma_cham_cong>
+        <ma_qtlv>7</ma_qtlv>
+        <thang>9</thang>
+        <nam>2025</nam>
+        <so_ngay_cong>25</so_ngay_cong>
+        <so_gio_tang_ca>8</so_gio_tang_ca>
+    </CHAM_CONG>
+
+
+    <CHUC_VU>
+        <ma_chuc_vu>1</ma_chuc_vu>
+        <ten_chuc_vu>Truong Phong</ten_chuc_vu>
+        <luong_co_ban>15000000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+        <ma_chuc_vu>2</ma_chuc_vu>
+        <ten_chuc_vu>Pho Phong</ten_chuc_vu>
+        <luong_co_ban>12000000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+        <ma_chuc_vu>3</ma_chuc_vu>
+        <ten_chuc_vu>Chuyen Vien</ten_chuc_vu>
+        <luong_co_ban>10000000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+        <ma_chuc_vu>4</ma_chuc_vu>
+        <ten_chuc_vu>Ky Su</ten_chuc_vu>
+        <luong_co_ban>11000000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+        <ma_chuc_vu>5</ma_chuc_vu>
+        <ten_chuc_vu>Ke Toan Vien</ten_chuc_vu>
+        <luong_co_ban>9000000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+        <ma_chuc_vu>6</ma_chuc_vu>
+        <ten_chuc_vu>Thuc Tap Sinh</ten_chuc_vu>
+        <luong_co_ban>5000000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+        <ma_chuc_vu>7</ma_chuc_vu>
+        <ten_chuc_vu>Truong Du An</ten_chuc_vu>
+        <luong_co_ban>16000000</luong_co_ban>
+    </CHUC_VU>
+
+
+    <DU_AN>
+        <ma_du_an>1</ma_du_an>
+        <ten_du_an>He thong quan ly nhan su</ten_du_an>
+        <ngay_bat_dau>2024-01-01</ngay_bat_dau>
+        <ngay_ket_thuc>2024-12-31</ngay_ket_thuc>
+        <mo_ta>Phat trien phan mem quan ly nhan su</mo_ta>
+    </DU_AN>
+    <DU_AN>
+        <ma_du_an>2</ma_du_an>
+        <ten_du_an>Website ban hang</ten_du_an>
+        <ngay_bat_dau>2024-02-15</ngay_bat_dau>
+        <ngay_ket_thuc>2024-08-15</ngay_ket_thuc>
+        <mo_ta>Xay dung website thuong mai dien tu</mo_ta>
+    </DU_AN>
+    <DU_AN>
+        <ma_du_an>3</ma_du_an>
+        <ten_du_an>He thong CRM</ten_du_an>
+        <ngay_bat_dau>2024-03-10</ngay_bat_dau>
+        <ngay_ket_thuc>2024-11-30</ngay_ket_thuc>
+        <mo_ta>Quan ly khach hang</mo_ta>
+    </DU_AN>
+    <DU_AN>
+        <ma_du_an>4</ma_du_an>
+        <ten_du_an>App di dong</ten_du_an>
+        <ngay_bat_dau>2024-05-01</ngay_bat_dau>
+        <ngay_ket_thuc>2024-10-30</ngay_ket_thuc>
+        <mo_ta>Phat trien ung dung mobile</mo_ta>
+    </DU_AN>
+    <DU_AN>
+        <ma_du_an>5</ma_du_an>
+        <ten_du_an>He thong ERP</ten_du_an>
+        <ngay_bat_dau>2024-06-01</ngay_bat_dau>
+        <ngay_ket_thuc>2025-01-31</ngay_ket_thuc>
+        <mo_ta>Tich hop quan ly doanh nghiep</mo_ta>
+    </DU_AN>
+    <DU_AN>
+        <ma_du_an>6</ma_du_an>
+        <ten_du_an>Phan mem ke toan</ten_du_an>
+        <ngay_bat_dau>2024-04-01</ngay_bat_dau>
+        <ngay_ket_thuc>2024-09-30</ngay_ket_thuc>
+        <mo_ta>Ke toan noi bo</mo_ta>
+    </DU_AN>
+    <DU_AN>
+        <ma_du_an>7</ma_du_an>
+        <ten_du_an>Phan mem cham cong</ten_du_an>
+        <ngay_bat_dau>2024-07-01</ngay_bat_dau>
+        <ngay_ket_thuc>2024-12-31</ngay_ket_thuc>
+        <mo_ta>Tu dong hoa cham cong</mo_ta>
+    </DU_AN>
+
+
+    <NHAN_VIEN>
+        <ma_nhan_vien>1</ma_nhan_vien>
+        <ho_ten>Nguyen Van A</ho_ten>
+        <ngay_sinh>1990-05-20</ngay_sinh>
+        <gioi_tinh>Nam</gioi_tinh>
+        <dia_chi>Ha Noi</dia_chi>
+        <so_dien_thoai>0901111111</so_dien_thoai>
+        <email>vana@example.com</email>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+        <ma_nhan_vien>2</ma_nhan_vien>
+        <ho_ten>Tran Thi B</ho_ten>
+        <ngay_sinh>1992-03-15</ngay_sinh>
+        <gioi_tinh>Nu</gioi_tinh>
+        <dia_chi>Hai Phong</dia_chi>
+        <so_dien_thoai>0902222222</so_dien_thoai>
+        <email>thib@example.com</email>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+        <ma_nhan_vien>3</ma_nhan_vien>
+        <ho_ten>Le Van C</ho_ten>
+        <ngay_sinh>1995-10-05</ngay_sinh>
+        <gioi_tinh>Nam</gioi_tinh>
+        <dia_chi>Da Nang</dia_chi>
+        <so_dien_thoai>0903333333</so_dien_thoai>
+        <email>vanc@example.com</email>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+        <ma_nhan_vien>4</ma_nhan_vien>
+        <ho_ten>Pham Thi D</ho_ten>
+        <ngay_sinh>1998-07-22</ngay_sinh>
+        <gioi_tinh>Nu</gioi_tinh>
+        <dia_chi>Hue</dia_chi>
+        <so_dien_thoai>0904444444</so_dien_thoai>
+        <email>thid@example.com</email>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+        <ma_nhan_vien>5</ma_nhan_vien>
+        <ho_ten>Hoang Van E</ho_ten>
+        <ngay_sinh>1991-12-11</ngay_sinh>
+        <gioi_tinh>Nam</gioi_tinh>
+        <dia_chi>Ha Noi</dia_chi>
+        <so_dien_thoai>0905555555</so_dien_thoai>
+        <email>vane@example.com</email>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+        <ma_nhan_vien>6</ma_nhan_vien>
+        <ho_ten>Dang Thi F</ho_ten>
+        <ngay_sinh>1994-09-01</ngay_sinh>
+        <gioi_tinh>Nu</gioi_tinh>
+        <dia_chi>TP Ho Chi Minh</dia_chi>
+        <so_dien_thoai>0906666666</so_dien_thoai>
+        <email>thif@example.com</email>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+        <ma_nhan_vien>7</ma_nhan_vien>
+        <ho_ten>Vu Van G</ho_ten>
+        <ngay_sinh>1996-11-30</ngay_sinh>
+        <gioi_tinh>Nam</gioi_tinh>
+        <dia_chi>Ha Noi</dia_chi>
+        <so_dien_thoai>0907777777</so_dien_thoai>
+        <email>vang@example.com</email>
+    </NHAN_VIEN>
+
+
+    <PHONG_BAN>
+        <ma_phong_ban>1</ma_phong_ban>
+        <ten_phong_ban>Ke Toan</ten_phong_ban>
+        <dia_chi>Ha Noi</dia_chi>
+        <so_dien_thoai>0241111111</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+        <ma_phong_ban>2</ma_phong_ban>
+        <ten_phong_ban>Nhan Su</ten_phong_ban>
+        <dia_chi>Hai Phong</dia_chi>
+        <so_dien_thoai>0242222222</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+        <ma_phong_ban>3</ma_phong_ban>
+        <ten_phong_ban>Ky Thuat</ten_phong_ban>
+        <dia_chi>Da Nang</dia_chi>
+        <so_dien_thoai>0243333333</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+        <ma_phong_ban>4</ma_phong_ban>
+        <ten_phong_ban>Kinh Doanh</ten_phong_ban>
+        <dia_chi>Ha Noi</dia_chi>
+        <so_dien_thoai>0244444444</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+        <ma_phong_ban>5</ma_phong_ban>
+        <ten_phong_ban>Marketing</ten_phong_ban>
+        <dia_chi>TP Ho Chi Minh</dia_chi>
+        <so_dien_thoai>0245555555</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+        <ma_phong_ban>6</ma_phong_ban>
+        <ten_phong_ban>Ban Giam Doc</ten_phong_ban>
+        <dia_chi>Ha Noi</dia_chi>
+        <so_dien_thoai>0246666666</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+        <ma_phong_ban>7</ma_phong_ban>
+        <ten_phong_ban>Ho Tro Khach Hang</ten_phong_ban>
+        <dia_chi>Hue</dia_chi>
+        <so_dien_thoai>0247777777</so_dien_thoai>
+    </PHONG_BAN>
+
+
+    <QTLV>
+        <ma_qtlv>1</ma_qtlv>
+        <ma_nhan_vien>1</ma_nhan_vien>
+        <ma_phong_ban>1</ma_phong_ban>
+        <ma_chuc_vu>5</ma_chuc_vu>
+        <ngay_bat_dau>2022-01-01</ngay_bat_dau>
+        <ngay_ket_thuc>2025-12-31</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+        <ma_qtlv>2</ma_qtlv>
+        <ma_nhan_vien>2</ma_nhan_vien>
+        <ma_phong_ban>2</ma_phong_ban>
+        <ma_chuc_vu>3</ma_chuc_vu>
+        <ngay_bat_dau>2023-02-01</ngay_bat_dau>
+        <ngay_ket_thuc>2025-12-31</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+        <ma_qtlv>3</ma_qtlv>
+        <ma_nhan_vien>3</ma_nhan_vien>
+        <ma_phong_ban>3</ma_phong_ban>
+        <ma_chuc_vu>4</ma_chuc_vu>
+        <ngay_bat_dau>2021-05-01</ngay_bat_dau>
+        <ngay_ket_thuc>2025-12-31</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+        <ma_qtlv>4</ma_qtlv>
+        <ma_nhan_vien>4</ma_nhan_vien>
+        <ma_phong_ban>4</ma_phong_ban>
+        <ma_chuc_vu>2</ma_chuc_vu>
+        <ngay_bat_dau>2022-07-01</ngay_bat_dau>
+        <ngay_ket_thuc>2025-12-31</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+        <ma_qtlv>5</ma_qtlv>
+        <ma_nhan_vien>5</ma_nhan_vien>
+        <ma_phong_ban>5</ma_phong_ban>
+        <ma_chuc_vu>1</ma_chuc_vu>
+        <ngay_bat_dau>2020-03-01</ngay_bat_dau>
+        <ngay_ket_thuc>2025-12-31</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+        <ma_qtlv>6</ma_qtlv>
+        <ma_nhan_vien>6</ma_nhan_vien>
+        <ma_phong_ban>3</ma_phong_ban>
+        <ma_chuc_vu>6</ma_chuc_vu>
+        <ngay_bat_dau>2024-01-01</ngay_bat_dau>
+        <ngay_ket_thuc>2025-12-31</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+        <ma_qtlv>7</ma_qtlv>
+        <ma_nhan_vien>7</ma_nhan_vien>
+        <ma_phong_ban>6</ma_phong_ban>
+        <ma_chuc_vu>7</ma_chuc_vu>
+        <ngay_bat_dau>2020-06-01</ngay_bat_dau>
+        <ngay_ket_thuc>2025-12-31</ngay_ket_thuc>
+    </QTLV>
+
+
+    <THAM_GIA_DU_AN>
+        <ma_tgda>1</ma_tgda>
+        <ma_nhan_vien>1</ma_nhan_vien>
+        <ma_du_an>1</ma_du_an>
+        <vai_tro>Quan ly</vai_tro>
+        <so_gio_tham_gia>120</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+        <ma_tgda>2</ma_tgda>
+        <ma_nhan_vien>2</ma_nhan_vien>
+        <ma_du_an>1</ma_du_an>
+        <vai_tro>Phan mem</vai_tro>
+        <so_gio_tham_gia>200</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+        <ma_tgda>3</ma_tgda>
+        <ma_nhan_vien>3</ma_nhan_vien>
+        <ma_du_an>2</ma_du_an>
+        <vai_tro>Phat trien</vai_tro>
+        <so_gio_tham_gia>150</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+        <ma_tgda>4</ma_tgda>
+        <ma_nhan_vien>4</ma_nhan_vien>
+        <ma_du_an>3</ma_du_an>
+        <vai_tro>Tester</vai_tro>
+        <so_gio_tham_gia>80</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+        <ma_tgda>5</ma_tgda>
+        <ma_nhan_vien>5</ma_nhan_vien>
+        <ma_du_an>4</ma_du_an>
+        <vai_tro>Thiet ke</vai_tro>
+        <so_gio_tham_gia>100</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+        <ma_tgda>6</ma_tgda>
+        <ma_nhan_vien>6</ma_nhan_vien>
+        <ma_du_an>5</ma_du_an>
+        <vai_tro>Tu van</vai_tro>
+        <so_gio_tham_gia>60</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+        <ma_tgda>7</ma_tgda>
+        <ma_nhan_vien>7</ma_nhan_vien>
+        <ma_du_an>7</ma_du_an>
+        <vai_tro>Ke toan</vai_tro>
+        <so_gio_tham_gia>90</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+
+</HE_THONG_NHAN_SU>
