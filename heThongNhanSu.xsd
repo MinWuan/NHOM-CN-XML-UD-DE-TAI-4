@@ -1,222 +1,413 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Khai báo phiên bản XML và mã hóa UTF-8 để hỗ trợ ký tự tiếng Việt -->
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://company.com/heThongNhanSu"
-           xmlns="http://company.com/heThongNhanSu"
-           elementFormDefault="qualified">
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://company.com/heThongNhanSu"
+  xmlns="http://company.com/heThongNhanSu"
+  elementFormDefault="qualified"
+>
+  <!-- xmlns:xs định nghĩa tiền tố xs để tham chiếu đến các phần tử và kiểu dữ liệu cơ bản
+  (primitive types) của XSD -->
+  <!-- http://www.w3.org/2001/XMLSchema là một URI (Uniform Resource Identifier) cố định, không phải
+  địa chỉ web thực tế, mà chỉ là một định danh duy nhất theo chuẩn W3C để chỉ ra rằng schema này sử
+  dụng phiên bản XSD 2001 -->
+  <!-- targetNamespace chỉ định rằng tất cả các phần tử (như HE_THONG_NHAN_SU, BANG_LUONG, v.v.) và
+  kiểu dữ liệu tùy chỉnh (như BANG_LUONG_Type) được định nghĩa trong schema này sẽ nằm trong
+  namespace http://company.com/heThongNhanSu -->
+  <!-- xmlns (không có tiền tố) đặt namespace mặc định là http://company.com/heThongNhanSu, nghĩa là
+  tất cả các phần tử và kiểu trong schema (như <element>, <complexType>) sẽ tự động thuộc namespace
+  này, trừ khi được ghi đè -->
+  <!-- Giá trị qualified yêu cầu mọi phần tử trong XML (như <BANG_LUONG>, <NHAN_VIEN>) phải thuộc
+  namespace http://company.com/heThongNhanSu, thường thông qua khai báo
+  xmlns="http://company.com/heThongNhanSu" ở phần tử gốc hoặc sử dụng tiền tố -->
 
-           
+
   <!-- ======== GỐC ======== -->
   <xs:element name="HE_THONG_NHAN_SU">
+    <!-- Định nghĩa phần tử gốc của XML là HE_THONG_NHAN_SU -->
     <xs:complexType>
+      <!-- Sử dụng complexType để chứa các phần tử con -->
       <xs:sequence>
-        <xs:element ref="DS_BANG_LUONG"/>
-        <xs:element ref="DS_CHAM_CONG"/>
-        <xs:element ref="DS_CHUC_VU"/>
-        <xs:element ref="DS_DU_AN"/>
-        <xs:element ref="DS_NHAN_VIEN"/>
-        <xs:element ref="DS_PHONG_BAN"/>
-        <xs:element ref="DS_QTLV"/>
-        <xs:element ref="DS_THAM_GIA_DU_AN"/>
+        <!-- Yêu cầu các phần tử con xuất hiện theo thứ tự cố định -->
+        <xs:element ref="DS_BANG_LUONG" />
+        <!-- Tham chiếu đến danh sách bảng lương -->
+        <xs:element ref="DS_CHAM_CONG" />
+        <!-- Tham chiếu đến danh sách chấm công -->
+        <xs:element ref="DS_CHUC_VU" />
+        <!-- Tham chiếu đến danh sách chức vụ -->
+        <xs:element ref="DS_DU_AN" />
+        <!-- Tham chiếu đến danh sách dự án -->
+        <xs:element ref="DS_NHAN_VIEN" />
+        <!-- Tham chiếu đến danh sách nhân viên -->
+        <xs:element ref="DS_PHONG_BAN" />
+        <!-- Tham chiếu đến danh sách phòng ban -->
+        <xs:element ref="DS_QTLV" />
+        <!-- Tham chiếu đến danh sách quá trình làm việc -->
+        <xs:element ref="DS_THAM_GIA_DU_AN" />
+        <!-- Tham chiếu đến danh sách tham gia dự án -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-
   <!-- ======== BẢNG LƯƠNG ======== -->
   <xs:element name="DS_BANG_LUONG">
+    <!-- Định nghĩa danh sách các bản ghi bảng lương -->
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="BANG_LUONG" type="BANG_LUONG_Type" maxOccurs="unbounded"/>
+        <xs:element name="BANG_LUONG" type="BANG_LUONG_Type" maxOccurs="unbounded" />
+        <!-- Mỗi BANG_LUONG thuộc kiểu BANG_LUONG_Type, có thể xuất hiện nhiều lần (unbounded) -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
   <xs:complexType name="BANG_LUONG_Type">
+    <!-- Định nghĩa kiểu phức tạp cho từng bản ghi bảng lương -->
     <xs:sequence>
-      <xs:element name="thang" type="xs:integer"/>
-      <xs:element name="nam" type="xs:gYear"/>
-      <xs:element name="luong_co_ban" type="xs:decimal"/>
-      <xs:element name="phu_cap" type="xs:decimal"/>
-      <xs:element name="tien_tang_ca" type="xs:decimal"/>
-      <xs:element name="tong_luong" type="xs:decimal"/>
+      <xs:element name="thang">
+        <!-- Định nghĩa phần tử thang (tháng) -->
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <!-- Giới hạn thang trong khoảng từ 1 đến 12 -->
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="12" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nam" type="xs:gYear" />
+      <!-- Định nghĩa phần tử nam (năm), kiểu gYear để chỉ năm -->
+      <xs:element name="luong_co_ban">
+        <!-- Định nghĩa phần tử lương cơ bản -->
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <!-- Lương cơ bản > 0 (Ex_clusive) -->
+            <xs:minExclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="phu_cap">
+        <!-- Định nghĩa phần tử phụ cấp -->
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <!-- Phụ cấp ≥ 0 (In_clusive) -->
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="tien_tang_ca">
+        <!-- Định nghĩa phần tử tiền tăng ca -->
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <!-- Tiền tăng ca ≥ 0 (In_clusive) -->
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="tong_luong">
+        <!-- Định nghĩa phần tử tổng lương -->
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <!-- Tổng lương > 0 (Ex_clusive) -->
+            <xs:minExclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
-    <xs:attribute name="ma_bl" type="xs:ID" use="required"/>
-    <xs:attribute name="ma_qtlv_ref_bl" type="xs:IDREF" use="required"/>
-    <xs:attribute name="ma_cc_ref_bl" type="xs:IDREF" use="required"/>
+    <xs:attribute name="ma_bl" type="xs:ID" use="required" />
+    <!-- Thuộc tính ma_bl là ID duy nhất, bắt buộc -->
+    <xs:attribute name="ma_qtlv_ref_bl" type="xs:IDREF" use="required" />
+    <!-- Thuộc tính ma_qtlv_ref_bl tham chiếu đến ID của quá trình làm việc, bắt buộc -->
+    <xs:attribute name="ma_cc_ref_bl" type="xs:IDREF" use="required" />
+    <!-- Thuộc tính ma_cc_ref_bl tham chiếu đến ID của chấm công, bắt buộc -->
   </xs:complexType>
-
-  
-
 
   <!-- ======== CHẤM CÔNG ======== -->
   <xs:element name="DS_CHAM_CONG">
+    <!-- Định nghĩa danh sách các bản ghi chấm công -->
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="CHAM_CONG" type="CHAM_CONG_Type" maxOccurs="unbounded"/>
+        <xs:element name="CHAM_CONG" type="CHAM_CONG_Type" maxOccurs="unbounded" />
+        <!-- Mỗi CHAM_CONG thuộc kiểu CHAM_CONG_Type, có thể xuất hiện nhiều lần -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
   <xs:complexType name="CHAM_CONG_Type">
+    <!-- Định nghĩa kiểu phức tạp cho từng bản ghi chấm công -->
     <xs:sequence>
       <xs:element name="thang">
+        <!-- Định nghĩa phần tử thang (tháng) -->
         <xs:simpleType>
           <xs:restriction base="xs:integer">
-            <xs:minInclusive value="1"/>
-            <xs:maxInclusive value="12"/>
+            <!-- Giới hạn thang trong khoảng từ 1 đến 12 -->
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="12" />
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="nam" type="xs:gYear"/>
-      <xs:element name="so_ngay_cong" type="xs:integer"/>
-      <xs:element name="so_gio_tang_ca" type="xs:integer"/>
+      <xs:element name="nam" type="xs:gYear" />
+      <!-- Định nghĩa phần tử nam (năm), kiểu gYear để chỉ năm -->
+      <xs:element name="so_ngay_cong">
+        <!-- Định nghĩa phần tử số ngày công -->
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <!-- Giới hạn số ngày công từ 0 đến 31 -->
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="31" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="so_gio_tang_ca">
+        <!-- Định nghĩa phần tử số giờ tăng ca -->
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <!-- Giới hạn số giờ tăng ca ≥ 0 (In_clusive) -->
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
-    <xs:attribute name="ma_cc" type="xs:ID" use="required"/>
-    <xs:attribute name="ma_qtlv_ref_cc" type="xs:IDREF" use="required"/>
+    <xs:attribute name="ma_cc" type="xs:ID" use="required" />
+    <!-- Thuộc tính ma_cc là ID duy nhất, bắt buộc -->
+    <xs:attribute name="ma_qtlv_ref_cc" type="xs:IDREF" use="required" />
+    <!-- Thuộc tính ma_qtlv_ref_cc tham chiếu đến ID của quá trình làm việc, bắt buộc -->
   </xs:complexType>
-
-  
-
 
   <!-- ======== CHỨC VỤ ======== -->
   <xs:element name="DS_CHUC_VU">
+    <!-- Định nghĩa danh sách các bản ghi chức vụ -->
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="CHUC_VU" type="CHUC_VU_Type" maxOccurs="unbounded"/>
+        <xs:element name="CHUC_VU" type="CHUC_VU_Type" maxOccurs="unbounded" />
+        <!-- Mỗi CHUC_VU thuộc kiểu CHUC_VU_Type, có thể xuất hiện nhiều lần -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
   <xs:complexType name="CHUC_VU_Type">
+    <!-- Định nghĩa kiểu phức tạp cho từng bản ghi chức vụ -->
     <xs:sequence>
-      <xs:element name="ten_chuc_vu" type="xs:string"/>
-      <xs:element name="luong_co_ban" type="xs:decimal"/>
+      <xs:element name="ten_chuc_vu">
+        <!-- Định nghĩa phần tử tên chức vụ -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="luong_co_ban">
+        <!-- Định nghĩa phần tử lương cơ bản -->
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <!-- Lương cơ bản > 0 (Ex_clusive) -->
+            <xs:minExclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
-    <xs:attribute name="ma_cv" type="xs:ID" use="required"/>
+    <xs:attribute name="ma_cv" type="xs:ID" use="required" />
+    <!-- Thuộc tính ma_cv là ID duy nhất, bắt buộc -->
   </xs:complexType>
-
-  
-
 
   <!-- ======== DỰ ÁN ======== -->
   <xs:element name="DS_DU_AN">
+    <!-- Định nghĩa danh sách các bản ghi dự án -->
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="DU_AN" type="DU_AN_Type" maxOccurs="unbounded"/>
+        <xs:element name="DU_AN" type="DU_AN_Type" maxOccurs="unbounded" />
+        <!-- Mỗi DU_AN thuộc kiểu DU_AN_Type, có thể xuất hiện nhiều lần -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
   <xs:complexType name="DU_AN_Type">
+    <!-- Định nghĩa kiểu phức tạp cho từng bản ghi dự án -->
     <xs:sequence>
-      <xs:element name="ten_du_an" type="xs:string"/>
-      <xs:element name="ngay_bat_dau" type="xs:date"/>
-      <xs:element name="ngay_ket_thuc" type="xs:date"/>
-      <xs:element name="mo_ta" type="xs:string"/>
+      <xs:element name="ten_du_an">
+        <!-- Định nghĩa phần tử tên dự án -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ngay_bat_dau" type="xs:date" />
+      <!-- Định nghĩa phần tử ngày bắt đầu, kiểu date -->
+      <xs:element name="ngay_ket_thuc" type="xs:date" />
+      <!-- Định nghĩa phần tử ngày kết thúc, kiểu date -->
+      <xs:element name="mo_ta" minOccurs="0">
+        <!-- Định nghĩa phần tử mô tả, tùy chọn (minOccurs=0) -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
-    <xs:attribute name="ma_da" type="xs:ID" use="required"/>
+    <xs:attribute name="ma_da" type="xs:ID" use="required" />
+    <!-- Thuộc tính ma_da là ID duy nhất, bắt buộc -->
   </xs:complexType>
-
 
   <!-- ======== NHÂN VIÊN ======== -->
   <xs:element name="DS_NHAN_VIEN">
+    <!-- Định nghĩa danh sách các bản ghi nhân viên -->
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="NHAN_VIEN" type="NHAN_VIEN_Type" maxOccurs="unbounded"/>
+        <xs:element name="NHAN_VIEN" type="NHAN_VIEN_Type" maxOccurs="unbounded" />
+        <!-- Mỗi NHAN_VIEN thuộc kiểu NHAN_VIEN_Type, có thể xuất hiện nhiều lần -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
   <xs:complexType name="NHAN_VIEN_Type">
+    <!-- Định nghĩa kiểu phức tạp cho từng bản ghi nhân viên -->
     <xs:sequence>
-      <xs:element name="ho_ten" type="xs:string"/>
-      <xs:element name="ngay_sinh" type="xs:date"/>
-      <xs:element name="gioi_tinh" type="xs:string"/>
-      <xs:element name="dia_chi" type="xs:string"/>
-      <xs:element name="email" type="xs:string"/>
-      <xs:element name="so_dien_thoai">
+      <xs:element name="ho_ten">
+        <!-- Định nghĩa phần tử họ tên -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ngay_sinh" type="xs:date" />
+      <!-- Định nghĩa phần tử ngày sinh, kiểu date -->
+      <xs:element name="gioi_tinh">
+        <!-- Định nghĩa phần tử giới tính -->
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:pattern value="(\+84|0)[0-9]{9,10}"/> 
+            <!-- Giới hạn giới tính chỉ là "Nam" hoặc "Nu" -->
+            <xs:enumeration value="Nam" />
+            <xs:enumeration value="Nu" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="dia_chi">
+        <!-- Định nghĩa phần tử địa chỉ -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="so_dien_thoai">
+        <!-- Định nghĩa phần tử số điện thoại -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <!-- Giới hạn số điện thoại theo pattern: bắt đầu +84 hoặc 0, theo sau 9-10 số -->
+            <xs:pattern value="(\+84|0)[0-9]{9,10}" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="email">
+        <!-- Định nghĩa phần tử email -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <!-- Giới hạn email theo pattern chuẩn (ví dụ: user@example.com) -->
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
     </xs:sequence>
-    
-    <xs:attribute name="ma_nv" type="xs:ID" use="required"/>
+    <xs:attribute name="ma_nv" type="xs:ID" use="required" />
+    <!-- Thuộc tính ma_nv là ID duy nhất, bắt buộc -->
   </xs:complexType>
-
-  
-
 
   <!-- ======== PHÒNG BAN ======== -->
   <xs:element name="DS_PHONG_BAN">
+    <!-- Định nghĩa danh sách các bản ghi phòng ban -->
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="PHONG_BAN" type="PHONG_BAN_Type" maxOccurs="unbounded"/>
+        <xs:element name="PHONG_BAN" type="PHONG_BAN_Type" maxOccurs="unbounded" />
+        <!-- Mỗi PHONG_BAN thuộc kiểu PHONG_BAN_Type, có thể xuất hiện nhiều lần -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
   <xs:complexType name="PHONG_BAN_Type">
+    <!-- Định nghĩa kiểu phức tạp cho từng bản ghi phòng ban -->
     <xs:sequence>
-      <xs:element name="ten_phong_ban" type="xs:string"/>
-      <xs:element name="dia_chi" type="xs:string"/>
+      <xs:element name="ten_phong_ban">
+        <!-- Định nghĩa phần tử tên phòng ban -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="dia_chi">
+        <!-- Định nghĩa phần tử địa chỉ -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="so_dien_thoai">
+        <!-- Định nghĩa phần tử số điện thoại -->
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:pattern value="(\+84|0)[0-9]{9,10}"/>
+            <!-- Giới hạn số điện thoại theo pattern: bắt đầu +84 hoặc 0, theo sau 9-10 số -->
+            <xs:pattern value="(\+84|0)[0-9]{9,10}" />
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="ma_pb" type="xs:ID" use="required"/>
+    <xs:attribute name="ma_pb" type="xs:ID" use="required" />
+    <!-- Thuộc tính ma_pb là ID duy nhất, bắt buộc -->
   </xs:complexType>
-
-  
-
 
   <!-- ======== QUÁ TRÌNH LÀM VIỆC ======== -->
   <xs:element name="DS_QTLV">
+    <!-- Định nghĩa danh sách các bản ghi quá trình làm việc -->
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="QTLV" type="QTLV_Type" maxOccurs="unbounded"/>
+        <xs:element name="QTLV" type="QTLV_Type" maxOccurs="unbounded" />
+        <!-- Mỗi QTLV thuộc kiểu QTLV_Type, có thể xuất hiện nhiều lần -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
   <xs:complexType name="QTLV_Type">
+    <!-- Định nghĩa kiểu phức tạp cho từng bản ghi quá trình làm việc -->
     <xs:sequence>
-      <xs:element name="ngay_bat_dau" type="xs:date"/>
-      <xs:element name="ngay_ket_thuc" type="xs:date"/>
+      <xs:element name="ngay_bat_dau" type="xs:date" />
+      <!-- Định nghĩa phần tử ngày bắt đầu, kiểu date -->
+      <xs:element name="ngay_ket_thuc" type="xs:date" />
+      <!-- Định nghĩa phần tử ngày kết thúc, kiểu date -->
     </xs:sequence>
-    <xs:attribute name="ma_qtlv" type="xs:ID" use="required"/>
-    <xs:attribute name="ma_nv_ref_qtlv" type="xs:IDREF" use="required"/>
-    <xs:attribute name="ma_pb_ref_qtlv" type="xs:IDREF" use="required"/>
-    <xs:attribute name="ma_cv_ref_qtlv" type="xs:IDREF" use="required"/>
+    <xs:attribute name="ma_qtlv" type="xs:ID" use="required" />
+    <!-- Thuộc tính ma_qtlv là ID duy nhất, bắt buộc -->
+    <xs:attribute name="ma_nv_ref_qtlv" type="xs:IDREF" use="required" />
+    <!-- Thuộc tính ma_nv_ref_qtlv tham chiếu đến ID của nhân viên, bắt buộc -->
+    <xs:attribute name="ma_pb_ref_qtlv" type="xs:IDREF" use="required" />
+    <!-- Thuộc tính ma_pb_ref_qtlv tham chiếu đến ID của phòng ban, bắt buộc -->
+    <xs:attribute name="ma_cv_ref_qtlv" type="xs:IDREF" use="required" />
+    <!-- Thuộc tính ma_cv_ref_qtlv tham chiếu đến ID của chức vụ, bắt buộc -->
   </xs:complexType>
-
-  
-
 
   <!-- ======== THAM GIA DỰ ÁN ======== -->
   <xs:element name="DS_THAM_GIA_DU_AN">
+    <!-- Định nghĩa danh sách các bản ghi tham gia dự án -->
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="THAM_GIA_DU_AN" type="THAM_GIA_DU_AN_Type" maxOccurs="unbounded"/>
+        <xs:element name="THAM_GIA_DU_AN" type="THAM_GIA_DU_AN_Type" maxOccurs="unbounded" />
+        <!-- Mỗi THAM_GIA_DU_AN thuộc kiểu THAM_GIA_DU_AN_Type, có thể xuất hiện nhiều lần -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
   <xs:complexType name="THAM_GIA_DU_AN_Type">
+    <!-- Định nghĩa kiểu phức tạp cho từng bản ghi tham gia dự án -->
     <xs:sequence>
-      <xs:element name="vai_tro" type="xs:string"/>
-      <xs:element name="so_gio_tham_gia" type="xs:integer"/>
+      <xs:element name="vai_tro">
+        <!-- Định nghĩa phần tử vai trò -->
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="so_gio_tham_gia">
+        <!-- Định nghĩa phần tử số giờ tham gia -->
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <!-- Giới hạn số giờ tham gia ≥ 0 (In_clusive) -->
+            <xs:minInclusive value="0" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
-    <xs:attribute name="ma_tgda" type="xs:ID" use="required"/>
-    <xs:attribute name="ma_nv_ref_tgda" type="xs:IDREF" use="required"/>
-    <xs:attribute name="ma_da_ref_tgda" type="xs:IDREF" use="required"/>
+    <xs:attribute name="ma_tgda" type="xs:ID" use="required" />
+    <!-- Thuộc tính ma_tgda là ID duy nhất, bắt buộc -->
+    <xs:attribute name="ma_nv_ref_tgda" type="xs:IDREF" use="required" />
+    <!-- Thuộc tính ma_nv_ref_tgda tham chiếu đến ID của nhân viên, bắt buộc -->
+    <xs:attribute name="ma_da_ref_tgda" type="xs:IDREF" use="required" />
+    <!-- Thuộc tính ma_da_ref_tgda tham chiếu đến ID của dự án, bắt buộc -->
   </xs:complexType>
 
 </xs:schema>
