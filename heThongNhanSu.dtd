@@ -1,20 +1,13 @@
-<!ELEMENT HE_THONG_NHAN_SU (BANG_LUONG, CHAM_CONG, CHUC_VU, DU_AN, NHAN_VIEN, PHONG_BAN, QTLV, THAM_GIA_DU_AN)>
+<!ELEMENT HE_THONG_NHAN_SU (DS_BANG_LUONG, DS_CHAM_CONG, DS_CHUC_VU, DS_DU_AN, DS_NHAN_VIEN, DS_PHONG_BAN, DS_QTLV, DS_THAM_GIA_DU_AN)>
 
-<!-- Bảng lương -->
-<!ELEMENT BANG_LUONG (
-    ma_bang_luong,
-    ma_qtlv,
-    ma_cham_cong,
-    thang,
-    nam,
-    luong_co_ban,
-    phu_cap,
-    tien_tang_ca,
-    tong_luong
-)>
-<!ELEMENT ma_bang_luong (#PCDATA)>
-<!ELEMENT ma_qtlv (#PCDATA)>
-<!ELEMENT ma_cham_cong (#PCDATA)>
+<!-- ======== BẢNG LƯƠNG ======== -->
+<!ELEMENT DS_BANG_LUONG (BANG_LUONG+)>
+<!ELEMENT BANG_LUONG (thang, nam, luong_co_ban, phu_cap, tien_tang_ca, tong_luong)>
+<!ATTLIST BANG_LUONG 
+    ma_bl ID #REQUIRED
+    ma_qtlv_ref_bl IDREF #REQUIRED
+    ma_cc_ref_bl IDREF #REQUIRED
+>
 <!ELEMENT thang (#PCDATA)>
 <!ELEMENT nam (#PCDATA)>
 <!ELEMENT luong_co_ban (#PCDATA)>
@@ -22,57 +15,39 @@
 <!ELEMENT tien_tang_ca (#PCDATA)>
 <!ELEMENT tong_luong (#PCDATA)>
 
-<!-- Chấm công -->
-<!ELEMENT CHAM_CONG (
-    ma_cham_cong,
-    ma_qtlv,
-    thang,
-    nam,
-    so_ngay_cong,
-    so_gio_tang_ca
-)>
-<!ELEMENT ma_cham_cong (#PCDATA)>
-<!ELEMENT ma_qtlv (#PCDATA)>
-<!ELEMENT thang (#PCDATA)>
-<!ELEMENT nam (#PCDATA)>
+
+<!-- ======== CHẤM CÔNG ======== -->
+<!ELEMENT DS_CHAM_CONG (CHAM_CONG+)>
+<!ELEMENT CHAM_CONG (thang, nam, so_ngay_cong, so_gio_tang_ca)>
+<!ATTLIST CHAM_CONG 
+    ma_cc ID #REQUIRED
+    ma_qtlv_ref_cc IDREF #REQUIRED
+>
 <!ELEMENT so_ngay_cong (#PCDATA)>
 <!ELEMENT so_gio_tang_ca (#PCDATA)>
 
-<!-- Chức vụ -->
-<!ELEMENT CHUC_VU (
-    ma_chuc_vu,
-    ten_chuc_vu,
-    luong_co_ban
-)>
-<!ELEMENT ma_chuc_vu (#PCDATA)>
-<!ELEMENT ten_chuc_vu (#PCDATA)>
-<!ELEMENT luong_co_ban (#PCDATA)>
 
-<!-- Dự án -->
-<!ELEMENT DU_AN (
-    ma_du_an,
-    ten_du_an,
-    ngay_bat_dau,
-    ngay_ket_thuc,
-    mo_ta
-)>
-<!ELEMENT ma_du_an (#PCDATA)>
+<!-- ======== CHỨC VỤ ======== -->
+<!ELEMENT DS_CHUC_VU (CHUC_VU+)>
+<!ELEMENT CHUC_VU (ten_chuc_vu, luong_co_ban)>
+<!ATTLIST CHUC_VU ma_cv ID #REQUIRED>
+<!ELEMENT ten_chuc_vu (#PCDATA)>
+
+
+<!-- ======== DỰ ÁN ======== -->
+<!ELEMENT DS_DU_AN (DU_AN+)>
+<!ELEMENT DU_AN (ten_du_an, ngay_bat_dau, ngay_ket_thuc, mo_ta)>
+<!ATTLIST DU_AN ma_da ID #REQUIRED>
 <!ELEMENT ten_du_an (#PCDATA)>
 <!ELEMENT ngay_bat_dau (#PCDATA)>
 <!ELEMENT ngay_ket_thuc (#PCDATA)>
 <!ELEMENT mo_ta (#PCDATA)>
 
-<!-- Nhân viên -->
-<!ELEMENT NHAN_VIEN (
-    ma_nhan_vien,
-    ho_ten,
-    ngay_sinh,
-    gioi_tinh,
-    dia_chi,
-    so_dien_thoai,
-    email
-)>
-<!ELEMENT ma_nhan_vien (#PCDATA)>
+
+<!-- ======== NHÂN VIÊN ======== -->
+<!ELEMENT DS_NHAN_VIEN (NHAN_VIEN+)>
+<!ELEMENT NHAN_VIEN (ho_ten, ngay_sinh, gioi_tinh, dia_chi, so_dien_thoai, email)>
+<!ATTLIST NHAN_VIEN ma_nv ID #REQUIRED>
 <!ELEMENT ho_ten (#PCDATA)>
 <!ELEMENT ngay_sinh (#PCDATA)>
 <!ELEMENT gioi_tinh (#PCDATA)>
@@ -80,44 +55,32 @@
 <!ELEMENT so_dien_thoai (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
 
-<!-- Phòng ban -->
-<!ELEMENT PHONG_BAN (
-    ma_phong_ban,
-    ten_phong_ban,
-    dia_chi,
-    so_dien_thoai
-)>
-<!ELEMENT ma_phong_ban (#PCDATA)>
+
+<!-- ======== PHÒNG BAN ======== -->
+<!ELEMENT DS_PHONG_BAN (PHONG_BAN+)>
+<!ELEMENT PHONG_BAN (ten_phong_ban, dia_chi, so_dien_thoai)>
+<!ATTLIST PHONG_BAN ma_pb ID #REQUIRED>
 <!ELEMENT ten_phong_ban (#PCDATA)>
-<!ELEMENT dia_chi (#PCDATA)>
-<!ELEMENT so_dien_thoai (#PCDATA)>
 
-<!-- Quá trình làm việc -->
-<!ELEMENT QTLV (
-    ma_qtlv,
-    ma_nhan_vien,
-    ma_phong_ban,
-    ma_chuc_vu,
-    ngay_bat_dau,
-    ngay_ket_thuc
-)>
-<!ELEMENT ma_qtlv (#PCDATA)>
-<!ELEMENT ma_nhan_vien (#PCDATA)>
-<!ELEMENT ma_phong_ban (#PCDATA)>
-<!ELEMENT ma_chuc_vu (#PCDATA)>
-<!ELEMENT ngay_bat_dau (#PCDATA)>
-<!ELEMENT ngay_ket_thuc (#PCDATA)>
 
-<!-- Tham gia dự án -->
-<!ELEMENT THAM_GIA_DU_AN (
-    ma_tgda,
-    ma_nhan_vien,
-    ma_du_an,
-    vai_tro,
-    so_gio_tham_gia
-)>
-<!ELEMENT ma_tgda (#PCDATA)>
-<!ELEMENT ma_nhan_vien (#PCDATA)>
-<!ELEMENT ma_du_an (#PCDATA)>
+<!-- ======== QUÁ TRÌNH LÀM VIỆC ======== -->
+<!ELEMENT DS_QTLV (QTLV+)>
+<!ELEMENT QTLV (ngay_bat_dau, ngay_ket_thuc)>
+<!ATTLIST QTLV 
+    ma_qtlv ID #REQUIRED
+    ma_nv_ref_qtlv IDREF #REQUIRED
+    ma_pb_ref_qtlv IDREF #REQUIRED
+    ma_cv_ref_qtlv IDREF #REQUIRED
+>
+
+
+<!-- ======== THAM GIA DỰ ÁN ======== -->
+<!ELEMENT DS_THAM_GIA_DU_AN (THAM_GIA_DU_AN+)>
+<!ELEMENT THAM_GIA_DU_AN (vai_tro, so_gio_tham_gia)>
+<!ATTLIST THAM_GIA_DU_AN 
+    ma_tgda ID #REQUIRED
+    ma_nv_ref_tgda IDREF #REQUIRED
+    ma_da_ref_tgda IDREF #REQUIRED
+>
 <!ELEMENT vai_tro (#PCDATA)>
 <!ELEMENT so_gio_tham_gia (#PCDATA)>

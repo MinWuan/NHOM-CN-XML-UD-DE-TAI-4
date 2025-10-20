@@ -1,162 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-  <!-- Root -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://company.com/heThongNhanSu"
+           xmlns="http://company.com/heThongNhanSu"
+           elementFormDefault="qualified">
+
+           
+  <!-- ======== GỐC ======== -->
   <xs:element name="HE_THONG_NHAN_SU">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="NHAN_VIEN" type="NHAN_VIEN_Type" maxOccurs="unbounded"/>
-        <xs:element name="PHONG_BAN" type="PHONG_BAN_Type" maxOccurs="unbounded"/>
-        <xs:element name="CHUC_VU" type="CHUC_VU_Type" maxOccurs="unbounded"/>
-        <xs:element name="QUA_TRINH_LAM_VIEC" type="QTLV_Type" maxOccurs="unbounded"/>
-        <xs:element name="CHAM_CONG" type="CHAM_CONG_Type" maxOccurs="unbounded"/>
-        <xs:element name="BANG_LUONG" type="BANG_LUONG_Type" maxOccurs="unbounded"/>
-        <xs:element name="DU_AN" type="DU_AN_Type" maxOccurs="unbounded"/>
-        <xs:element name="THAM_GIA_DU_AN" type="THAM_GIA_DU_AN_Type" maxOccurs="unbounded"/>
+        <xs:element ref="DS_BANG_LUONG"/>
+        <xs:element ref="DS_CHAM_CONG"/>
+        <xs:element ref="DS_CHUC_VU"/>
+        <xs:element ref="DS_DU_AN"/>
+        <xs:element ref="DS_NHAN_VIEN"/>
+        <xs:element ref="DS_PHONG_BAN"/>
+        <xs:element ref="DS_QTLV"/>
+        <xs:element ref="DS_THAM_GIA_DU_AN"/>
       </xs:sequence>
     </xs:complexType>
-
-    <!-- Khóa chính & ngoại -->
-    <xs:key name="pk_nhan_vien">
-      <xs:selector xpath="NHAN_VIEN"/>
-      <xs:field xpath="ma_nhan_vien"/>
-    </xs:key>
-
-    <xs:key name="pk_phong_ban">
-      <xs:selector xpath="PHONG_BAN"/>
-      <xs:field xpath="ma_phong_ban"/>
-    </xs:key>
-
-    <xs:key name="pk_chuc_vu">
-      <xs:selector xpath="CHUC_VU"/>
-      <xs:field xpath="ma_chuc_vu"/>
-    </xs:key>
-
-    <xs:key name="pk_qtlv">
-      <xs:selector xpath="QUA_TRINH_LAM_VIEC"/>
-      <xs:field xpath="ma_qtlv"/>
-    </xs:key>
-
-    <xs:key name="pk_cham_cong">
-      <xs:selector xpath="CHAM_CONG"/>
-      <xs:field xpath="ma_cham_cong"/>
-    </xs:key>
-
-    <xs:key name="pk_bang_luong">
-      <xs:selector xpath="BANG_LUONG"/>
-      <xs:field xpath="ma_bang_luong"/>
-    </xs:key>
-
-    <xs:key name="pk_du_an">
-      <xs:selector xpath="DU_AN"/>
-      <xs:field xpath="ma_du_an"/>
-    </xs:key>
-
-    <xs:key name="pk_tgda">
-      <xs:selector xpath="THAM_GIA_DU_AN"/>
-      <xs:field xpath="ma_tgda"/>
-    </xs:key>
-
-    <!-- Foreign Keys -->
-    <xs:keyref name="fk_qtlv_nv" refer="pk_nhan_vien">
-      <xs:selector xpath="QUA_TRINH_LAM_VIEC"/>
-      <xs:field xpath="ma_nhan_vien"/>
-    </xs:keyref>
-
-    <xs:keyref name="fk_qtlv_pb" refer="pk_phong_ban">
-      <xs:selector xpath="QUA_TRINH_LAM_VIEC"/>
-      <xs:field xpath="ma_phong_ban"/>
-    </xs:keyref>
-
-    <xs:keyref name="fk_qtlv_cv" refer="pk_chuc_vu">
-      <xs:selector xpath="QUA_TRINH_LAM_VIEC"/>
-      <xs:field xpath="ma_chuc_vu"/>
-    </xs:keyref>
-
-    <xs:keyref name="fk_cham_cong_qtlv" refer="pk_qtlv">
-      <xs:selector xpath="CHAM_CONG"/>
-      <xs:field xpath="ma_qtlv"/>
-    </xs:keyref>
-
-    <xs:keyref name="fk_bang_luong_qtlv" refer="pk_qtlv">
-      <xs:selector xpath="BANG_LUONG"/>
-      <xs:field xpath="ma_qtlv"/>
-    </xs:keyref>
-
-    <xs:keyref name="fk_bang_luong_cham_cong" refer="pk_cham_cong">
-      <xs:selector xpath="BANG_LUONG"/>
-      <xs:field xpath="ma_cham_cong"/>
-    </xs:keyref>
-
-    <xs:keyref name="fk_tgda_nv" refer="pk_nhan_vien">
-      <xs:selector xpath="THAM_GIA_DU_AN"/>
-      <xs:field xpath="ma_nhan_vien"/>
-    </xs:keyref>
-
-    <xs:keyref name="fk_tgda_duan" refer="pk_du_an">
-      <xs:selector xpath="THAM_GIA_DU_AN"/>
-      <xs:field xpath="ma_du_an"/>
-    </xs:keyref>
-
   </xs:element>
 
-  <!-- Các kiểu dữ liệu -->
-  <xs:complexType name="NHAN_VIEN_Type">
-    <xs:sequence>
-      <xs:element name="ma_nhan_vien" type="xs:integer"/>
-      <xs:element name="ho_ten" type="xs:string"/>
-      <xs:element name="ngay_sinh" type="xs:date"/>
-      <xs:element name="gioi_tinh" type="xs:string"/>
-      <xs:element name="dia_chi" type="xs:string"/>
-      <xs:element name="so_dien_thoai" type="xs:string"/>
-      <xs:element name="email" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
 
-  <xs:complexType name="PHONG_BAN_Type">
-    <xs:sequence>
-      <xs:element name="ma_phong_ban" type="xs:integer"/>
-      <xs:element name="ten_phong_ban" type="xs:string"/>
-      <xs:element name="dia_chi" type="xs:string"/>
-      <xs:element name="so_dien_thoai" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="CHUC_VU_Type">
-    <xs:sequence>
-      <xs:element name="ma_chuc_vu" type="xs:integer"/>
-      <xs:element name="ten_chuc_vu" type="xs:string"/>
-      <xs:element name="luong_co_ban" type="xs:decimal"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="QTLV_Type">
-    <xs:sequence>
-      <xs:element name="ma_qtlv" type="xs:integer"/>
-      <xs:element name="ma_nhan_vien" type="xs:integer"/>
-      <xs:element name="ma_phong_ban" type="xs:integer"/>
-      <xs:element name="ma_chuc_vu" type="xs:integer"/>
-      <xs:element name="ngay_bat_dau" type="xs:date"/>
-      <xs:element name="ngay_ket_thuc" type="xs:date"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="CHAM_CONG_Type">
-    <xs:sequence>
-      <xs:element name="ma_cham_cong" type="xs:integer"/>
-      <xs:element name="ma_qtlv" type="xs:integer"/>
-      <xs:element name="thang" type="xs:integer"/>
-      <xs:element name="nam" type="xs:gYear"/>
-      <xs:element name="so_ngay_cong" type="xs:integer"/>
-      <xs:element name="so_gio_tang_ca" type="xs:integer"/>
-    </xs:sequence>
-  </xs:complexType>
+  <!-- ======== BẢNG LƯƠNG ======== -->
+  <xs:element name="DS_BANG_LUONG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="BANG_LUONG" type="BANG_LUONG_Type" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 
   <xs:complexType name="BANG_LUONG_Type">
     <xs:sequence>
-      <xs:element name="ma_bang_luong" type="xs:integer"/>
-      <xs:element name="ma_qtlv" type="xs:integer"/>
-      <xs:element name="ma_cham_cong" type="xs:integer"/>
       <xs:element name="thang" type="xs:integer"/>
       <xs:element name="nam" type="xs:gYear"/>
       <xs:element name="luong_co_ban" type="xs:decimal"/>
@@ -164,26 +41,182 @@
       <xs:element name="tien_tang_ca" type="xs:decimal"/>
       <xs:element name="tong_luong" type="xs:decimal"/>
     </xs:sequence>
+    <xs:attribute name="ma_bl" type="xs:ID" use="required"/>
+    <xs:attribute name="ma_qtlv_ref_bl" type="xs:IDREF" use="required"/>
+    <xs:attribute name="ma_cc_ref_bl" type="xs:IDREF" use="required"/>
   </xs:complexType>
+
+  
+
+
+  <!-- ======== CHẤM CÔNG ======== -->
+  <xs:element name="DS_CHAM_CONG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CHAM_CONG" type="CHAM_CONG_Type" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="CHAM_CONG_Type">
+    <xs:sequence>
+      <xs:element name="thang">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="12"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nam" type="xs:gYear"/>
+      <xs:element name="so_ngay_cong" type="xs:integer"/>
+      <xs:element name="so_gio_tang_ca" type="xs:integer"/>
+    </xs:sequence>
+    <xs:attribute name="ma_cc" type="xs:ID" use="required"/>
+    <xs:attribute name="ma_qtlv_ref_cc" type="xs:IDREF" use="required"/>
+  </xs:complexType>
+
+  
+
+
+  <!-- ======== CHỨC VỤ ======== -->
+  <xs:element name="DS_CHUC_VU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CHUC_VU" type="CHUC_VU_Type" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="CHUC_VU_Type">
+    <xs:sequence>
+      <xs:element name="ten_chuc_vu" type="xs:string"/>
+      <xs:element name="luong_co_ban" type="xs:decimal"/>
+    </xs:sequence>
+    <xs:attribute name="ma_cv" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  
+
+
+  <!-- ======== DỰ ÁN ======== -->
+  <xs:element name="DS_DU_AN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DU_AN" type="DU_AN_Type" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 
   <xs:complexType name="DU_AN_Type">
     <xs:sequence>
-      <xs:element name="ma_du_an" type="xs:integer"/>
       <xs:element name="ten_du_an" type="xs:string"/>
       <xs:element name="ngay_bat_dau" type="xs:date"/>
       <xs:element name="ngay_ket_thuc" type="xs:date"/>
       <xs:element name="mo_ta" type="xs:string"/>
     </xs:sequence>
+    <xs:attribute name="ma_da" type="xs:ID" use="required"/>
   </xs:complexType>
+
+
+  <!-- ======== NHÂN VIÊN ======== -->
+  <xs:element name="DS_NHAN_VIEN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NHAN_VIEN" type="NHAN_VIEN_Type" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="NHAN_VIEN_Type">
+    <xs:sequence>
+      <xs:element name="ho_ten" type="xs:string"/>
+      <xs:element name="ngay_sinh" type="xs:date"/>
+      <xs:element name="gioi_tinh" type="xs:string"/>
+      <xs:element name="dia_chi" type="xs:string"/>
+      <xs:element name="email" type="xs:string"/>
+      <xs:element name="so_dien_thoai">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="(\+84|0)[0-9]{9,10}"/> 
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    
+    <xs:attribute name="ma_nv" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  
+
+
+  <!-- ======== PHÒNG BAN ======== -->
+  <xs:element name="DS_PHONG_BAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PHONG_BAN" type="PHONG_BAN_Type" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="PHONG_BAN_Type">
+    <xs:sequence>
+      <xs:element name="ten_phong_ban" type="xs:string"/>
+      <xs:element name="dia_chi" type="xs:string"/>
+      <xs:element name="so_dien_thoai">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="(\+84|0)[0-9]{9,10}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ma_pb" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  
+
+
+  <!-- ======== QUÁ TRÌNH LÀM VIỆC ======== -->
+  <xs:element name="DS_QTLV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="QTLV" type="QTLV_Type" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="QTLV_Type">
+    <xs:sequence>
+      <xs:element name="ngay_bat_dau" type="xs:date"/>
+      <xs:element name="ngay_ket_thuc" type="xs:date"/>
+    </xs:sequence>
+    <xs:attribute name="ma_qtlv" type="xs:ID" use="required"/>
+    <xs:attribute name="ma_nv_ref_qtlv" type="xs:IDREF" use="required"/>
+    <xs:attribute name="ma_pb_ref_qtlv" type="xs:IDREF" use="required"/>
+    <xs:attribute name="ma_cv_ref_qtlv" type="xs:IDREF" use="required"/>
+  </xs:complexType>
+
+  
+
+
+  <!-- ======== THAM GIA DỰ ÁN ======== -->
+  <xs:element name="DS_THAM_GIA_DU_AN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="THAM_GIA_DU_AN" type="THAM_GIA_DU_AN_Type" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 
   <xs:complexType name="THAM_GIA_DU_AN_Type">
     <xs:sequence>
-      <xs:element name="ma_tgda" type="xs:integer"/>
-      <xs:element name="ma_nhan_vien" type="xs:integer"/>
-      <xs:element name="ma_du_an" type="xs:integer"/>
       <xs:element name="vai_tro" type="xs:string"/>
       <xs:element name="so_gio_tham_gia" type="xs:integer"/>
     </xs:sequence>
+    <xs:attribute name="ma_tgda" type="xs:ID" use="required"/>
+    <xs:attribute name="ma_nv_ref_tgda" type="xs:IDREF" use="required"/>
+    <xs:attribute name="ma_da_ref_tgda" type="xs:IDREF" use="required"/>
   </xs:complexType>
 
 </xs:schema>
