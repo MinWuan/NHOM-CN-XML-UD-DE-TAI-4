@@ -1,138 +1,75 @@
 <!ELEMENT HE_THONG_NHAN_SU (DS_BANG_LUONG, DS_CHAM_CONG, DS_CHUC_VU, DS_DU_AN, DS_NHAN_VIEN, DS_PHONG_BAN, DS_QTLV, DS_THAM_GIA_DU_AN)>
-<!-- Định nghĩa phần tử gốc HE_THONG_NHAN_SU, chứa các danh sách con theo thứ tự cố định: DS_BANG_LUONG, DS_CHAM_CONG, v.v., mỗi danh sách xuất hiện đúng 1 lần -->
 
-<!-- ======== BẢNG LƯƠNG ======== -->
 <!ELEMENT DS_BANG_LUONG (BANG_LUONG+)>
-<!-- Định nghĩa danh sách DS_BANG_LUONG, chứa một hoặc nhiều phần tử BANG_LUONG (dấu + nghĩa là ít nhất 1 lần) -->
 <!ELEMENT BANG_LUONG (thang, nam, luong_co_ban, phu_cap, tien_tang_ca, tong_luong)>
-<!-- Định nghĩa cấu trúc của BANG_LUONG, bao gồm các phần tử con theo thứ tự: thang, nam, luong_co_ban, phu_cap, tien_tang_ca, tong_luong, mỗi phần tử xuất hiện đúng 1 lần -->
-<!ATTLIST BANG_LUONG 
+<!ATTLIST BANG_LUONG
     ma_bl ID #REQUIRED
     ma_qtlv_ref_bl IDREF #REQUIRED
     ma_cc_ref_bl IDREF #REQUIRED
 >
-<!-- Định nghĩa các thuộc tính cho BANG_LUONG: 
-    - ma_bl: Là ID duy nhất, bắt buộc (REQUIRED)
-    - ma_qtlv_ref_bl: Tham chiếu đến ID của QTLV, bắt buộc
-    - ma_cc_ref_bl: Tham chiếu đến ID của CHAM_CONG, bắt buộc -->
-<!ELEMENT thang (#PCDATA)>
-<!-- Định nghĩa phần tử thang, chứa dữ liệu văn bản phân tích (#PCDATA), không có ràng buộc kiểu cụ thể -->
-<!ELEMENT nam (#PCDATA)>
-<!-- Định nghĩa phần tử nam, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
-<!ELEMENT luong_co_ban (#PCDATA)>
-<!-- Định nghĩa phần tử luong_co_ban, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
-<!ELEMENT phu_cap (#PCDATA)>
-<!-- Định nghĩa phần tử phu_cap, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
-<!ELEMENT tien_tang_ca (#PCDATA)>
-<!-- Định nghĩa phần tử tien_tang_ca, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
-<!ELEMENT tong_luong (#PCDATA)>
-<!-- Định nghĩa phần tử tong_luong, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 
-<!-- ======== CHẤM CÔNG ======== -->
+<!ELEMENT thang (#PCDATA)>
+<!ELEMENT nam (#PCDATA)>
+<!ELEMENT luong_co_ban (#PCDATA)>
+<!ELEMENT phu_cap (#PCDATA)>
+<!ELEMENT tien_tang_ca (#PCDATA)>
+<!ELEMENT tong_luong (#PCDATA)>
+
 <!ELEMENT DS_CHAM_CONG (CHAM_CONG+)>
-<!-- Định nghĩa danh sách DS_CHAM_CONG, chứa một hoặc nhiều phần tử CHAM_CONG -->
 <!ELEMENT CHAM_CONG (thang, nam, so_ngay_cong, so_gio_tang_ca)>
-<!-- Định nghĩa cấu trúc của CHAM_CONG, bao gồm các phần tử con theo thứ tự: thang, nam, so_ngay_cong, so_gio_tang_ca, mỗi phần tử xuất hiện đúng 1 lần -->
-<!ATTLIST CHAM_CONG 
+<!ATTLIST CHAM_CONG
     ma_cc ID #REQUIRED
     ma_qtlv_ref_cc IDREF #REQUIRED
 >
-<!-- Định nghĩa các thuộc tính cho CHAM_CONG: 
-    - ma_cc: Là ID duy nhất, bắt buộc
-    - ma_qtlv_ref_cc: Tham chiếu đến ID của QTLV, bắt buộc -->
+
 <!ELEMENT so_ngay_cong (#PCDATA)>
-<!-- Định nghĩa phần tử so_ngay_cong, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT so_gio_tang_ca (#PCDATA)>
-<!-- Định nghĩa phần tử so_gio_tang_ca, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 
-<!-- ======== CHỨC VỤ ======== -->
 <!ELEMENT DS_CHUC_VU (CHUC_VU+)>
-<!-- Định nghĩa danh sách DS_CHUC_VU, chứa một hoặc nhiều phần tử CHUC_VU -->
 <!ELEMENT CHUC_VU (ten_chuc_vu, luong_co_ban)>
-<!-- Định nghĩa cấu trúc của CHUC_VU, bao gồm các phần tử con theo thứ tự: ten_chuc_vu, luong_co_ban, mỗi phần tử xuất hiện đúng 1 lần -->
 <!ATTLIST CHUC_VU ma_cv ID #REQUIRED>
-<!-- Định nghĩa thuộc tính ma_cv cho CHUC_VU: Là ID duy nhất, bắt buộc -->
 <!ELEMENT ten_chuc_vu (#PCDATA)>
-<!-- Định nghĩa phần tử ten_chuc_vu, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 
-<!-- ======== DỰ ÁN ======== -->
 <!ELEMENT DS_DU_AN (DU_AN+)>
-<!-- Định nghĩa danh sách DS_DU_AN, chứa một hoặc nhiều phần tử DU_AN -->
 <!ELEMENT DU_AN (ten_du_an, ngay_bat_dau, ngay_ket_thuc, mo_ta)>
-<!-- Định nghĩa cấu trúc của DU_AN, bao gồm các phần tử con theo thứ tự: ten_du_an, ngay_bat_dau, ngay_ket_thuc, mo_ta, mỗi phần tử xuất hiện đúng 1 lần -->
 <!ATTLIST DU_AN ma_da ID #REQUIRED>
-<!-- Định nghĩa thuộc tính ma_da cho DU_AN: Là ID duy nhất, bắt buộc -->
 <!ELEMENT ten_du_an (#PCDATA)>
-<!-- Định nghĩa phần tử ten_du_an, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT ngay_bat_dau (#PCDATA)>
-<!-- Định nghĩa phần tử ngay_bat_dau, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT ngay_ket_thuc (#PCDATA)>
-<!-- Định nghĩa phần tử ngay_ket_thuc, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT mo_ta (#PCDATA)>
-<!-- Định nghĩa phần tử mo_ta, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 
-<!-- ======== NHÂN VIÊN ======== -->
 <!ELEMENT DS_NHAN_VIEN (NHAN_VIEN+)>
-<!-- Định nghĩa danh sách DS_NHAN_VIEN, chứa một hoặc nhiều phần tử NHAN_VIEN -->
 <!ELEMENT NHAN_VIEN (ho_ten, ngay_sinh, gioi_tinh, dia_chi, so_dien_thoai, email)>
-<!-- Định nghĩa cấu trúc của NHAN_VIEN, bao gồm các phần tử con theo thứ tự: ho_ten, ngay_sinh, gioi_tinh, dia_chi, so_dien_thoai, email, mỗi phần tử xuất hiện đúng 1 lần -->
 <!ATTLIST NHAN_VIEN ma_nv ID #REQUIRED>
-<!-- Định nghĩa thuộc tính ma_nv cho NHAN_VIEN: Là ID duy nhất, bắt buộc -->
 <!ELEMENT ho_ten (#PCDATA)>
-<!-- Định nghĩa phần tử ho_ten, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT ngay_sinh (#PCDATA)>
-<!-- Định nghĩa phần tử ngay_sinh, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT gioi_tinh (#PCDATA)>
-<!-- Định nghĩa phần tử gioi_tinh, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT dia_chi (#PCDATA)>
-<!-- Định nghĩa phần tử dia_chi, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT so_dien_thoai (#PCDATA)>
-<!-- Định nghĩa phần tử so_dien_thoai, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT email (#PCDATA)>
-<!-- Định nghĩa phần tử email, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 
-<!-- ======== PHÒNG BAN ======== -->
 <!ELEMENT DS_PHONG_BAN (PHONG_BAN+)>
-<!-- Định nghĩa danh sách DS_PHONG_BAN, chứa một hoặc nhiều phần tử PHONG_BAN -->
 <!ELEMENT PHONG_BAN (ten_phong_ban, dia_chi, so_dien_thoai)>
-<!-- Định nghĩa cấu trúc của PHONG_BAN, bao gồm các phần tử con theo thứ tự: ten_phong_ban, dia_chi, so_dien_thoai, mỗi phần tử xuất hiện đúng 1 lần -->
 <!ATTLIST PHONG_BAN ma_pb ID #REQUIRED>
-<!-- Định nghĩa thuộc tính ma_pb cho PHONG_BAN: Là ID duy nhất, bắt buộc -->
 <!ELEMENT ten_phong_ban (#PCDATA)>
-<!-- Định nghĩa phần tử ten_phong_ban, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 
-<!-- ======== QUÁ TRÌNH LÀM VIỆC ======== -->
 <!ELEMENT DS_QTLV (QTLV+)>
-<!-- Định nghĩa danh sách DS_QTLV, chứa một hoặc nhiều phần tử QTLV -->
 <!ELEMENT QTLV (ngay_bat_dau, ngay_ket_thuc)>
-<!-- Định nghĩa cấu trúc của QTLV, bao gồm các phần tử con theo thứ tự: ngay_bat_dau, ngay_ket_thuc, mỗi phần tử xuất hiện đúng 1 lần -->
-<!ATTLIST QTLV 
+<!ATTLIST QTLV
     ma_qtlv ID #REQUIRED
     ma_nv_ref_qtlv IDREF #REQUIRED
     ma_pb_ref_qtlv IDREF #REQUIRED
     ma_cv_ref_qtlv IDREF #REQUIRED
 >
-<!-- Định nghĩa các thuộc tính cho QTLV: 
-    - ma_qtlv: Là ID duy nhất, bắt buộc
-    - ma_nv_ref_qtlv: Tham chiếu đến ID của NHAN_VIEN, bắt buộc
-    - ma_pb_ref_qtlv: Tham chiếu đến ID của PHONG_BAN, bắt buộc
-    - ma_cv_ref_qtlv: Tham chiếu đến ID của CHUC_VU, bắt buộc -->
 
-<!-- ======== THAM GIA DỰ ÁN ======== -->
+
 <!ELEMENT DS_THAM_GIA_DU_AN (THAM_GIA_DU_AN+)>
-<!-- Định nghĩa danh sách DS_THAM_GIA_DU_AN, chứa một hoặc nhiều phần tử THAM_GIA_DU_AN -->
 <!ELEMENT THAM_GIA_DU_AN (vai_tro, so_gio_tham_gia)>
-<!-- Định nghĩa cấu trúc của THAM_GIA_DU_AN, bao gồm các phần tử con theo thứ tự: vai_tro, so_gio_tham_gia, mỗi phần tử xuất hiện đúng 1 lần -->
-<!ATTLIST THAM_GIA_DU_AN 
+<!ATTLIST THAM_GIA_DU_AN
     ma_tgda ID #REQUIRED
     ma_nv_ref_tgda IDREF #REQUIRED
     ma_da_ref_tgda IDREF #REQUIRED
 >
-<!-- Định nghĩa các thuộc tính cho THAM_GIA_DU_AN: 
-    - ma_tgda: Là ID duy nhất, bắt buộc
-    - ma_nv_ref_tgda: Tham chiếu đến ID của NHAN_VIEN, bắt buộc
-    - ma_da_ref_tgda: Tham chiếu đến ID của DU_AN, bắt buộc -->
+
 <!ELEMENT vai_tro (#PCDATA)>
-<!-- Định nghĩa phần tử vai_tro, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
 <!ELEMENT so_gio_tham_gia (#PCDATA)>
-<!-- Định nghĩa phần tử so_gio_tham_gia, chứa dữ liệu văn bản phân tích, không có ràng buộc kiểu cụ thể -->
