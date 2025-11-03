@@ -1,0 +1,71 @@
+<!ELEMENT HE_THONG_NHAN_SU (DS_BANG_LUONG, DS_CHAM_CONG, DS_CHUC_VU, DS_DU_AN, DS_NHAN_VIEN, DS_PHONG_BAN, DS_QTLV, DS_THAM_GIA_DU_AN)>
+
+<!-- ======== BẢNG LƯƠNG ======== -->
+<!ELEMENT DS_BANG_LUONG (BANG_LUONG+)>
+<!ELEMENT BANG_LUONG (ma_bl, ma_qtlv, ma_cc, thang, nam, luong_co_ban, phu_cap, tien_tang_ca, tong_luong)>
+
+<!ELEMENT ma_bl (#PCDATA)>
+<!ELEMENT ma_qtlv (#PCDATA)>
+<!ELEMENT ma_cc (#PCDATA)>
+<!ELEMENT thang (#PCDATA)>
+<!ELEMENT nam (#PCDATA)>
+<!ELEMENT luong_co_ban (#PCDATA)>
+<!ELEMENT phu_cap (#PCDATA)>
+<!ELEMENT tien_tang_ca (#PCDATA)>
+<!ELEMENT tong_luong (#PCDATA)>
+
+
+<!-- ======== CHẤM CÔNG ======== -->
+<!ELEMENT DS_CHAM_CONG (CHAM_CONG+)>
+<!ELEMENT CHAM_CONG (ma_cc, ma_qtlv, thang, nam, so_ngay_cong, so_gio_tang_ca)>
+<!ELEMENT so_ngay_cong (#PCDATA)>
+<!ELEMENT so_gio_tang_ca (#PCDATA)>
+
+
+<!-- ======== CHỨC VỤ ======== -->
+<!ELEMENT DS_CHUC_VU (CHUC_VU+)>
+<!ELEMENT CHUC_VU (ma_cv, ten_chuc_vu, luong_co_ban)>
+<!ELEMENT ma_cv (#PCDATA)>
+<!ELEMENT ten_chuc_vu (#PCDATA)>
+
+
+<!-- ======== DỰ ÁN ======== -->
+<!ELEMENT DS_DU_AN (DU_AN+)>
+<!ELEMENT DU_AN (ma_da, ten_du_an, ngay_bat_dau, ngay_ket_thuc, mo_ta)>
+<!ELEMENT ma_da (#PCDATA)>
+<!ELEMENT ten_du_an (#PCDATA)>
+<!ELEMENT ngay_bat_dau (#PCDATA)>
+<!ELEMENT ngay_ket_thuc (#PCDATA)>
+<!ELEMENT mo_ta (#PCDATA)>
+
+
+<!-- ======== NHÂN VIÊN ======== -->
+<!ELEMENT DS_NHAN_VIEN (NHAN_VIEN+)>
+<!ELEMENT NHAN_VIEN (ma_nv, ho_ten, ngay_sinh, gioi_tinh, dia_chi, email, so_dien_thoai)>
+<!ELEMENT ma_nv (#PCDATA)>
+<!ELEMENT ho_ten (#PCDATA)>
+<!ELEMENT ngay_sinh (#PCDATA)>
+<!ELEMENT gioi_tinh (#PCDATA)>
+<!ELEMENT dia_chi (#PCDATA)>
+<!ELEMENT so_dien_thoai (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+
+<!-- ======== PHÒNG BAN ======== -->
+<!ELEMENT DS_PHONG_BAN (PHONG_BAN+)>
+<!ELEMENT PHONG_BAN (ma_pb, ten_phong_ban, dia_chi, so_dien_thoai)>
+<!ELEMENT ma_pb (#PCDATA)>
+<!ELEMENT ten_phong_ban (#PCDATA)>
+
+
+<!-- ======== QUÁ TRÌNH LÀM VIỆC ======== -->
+<!ELEMENT DS_QTLV (QTLV+)>
+<!ELEMENT QTLV (ma_qtlv, ma_nv, ma_pb, ma_cv, ngay_bat_dau, ngay_ket_thuc)>
+
+
+<!-- ======== THAM GIA DỰ ÁN ======== -->
+<!ELEMENT DS_THAM_GIA_DU_AN (THAM_GIA_DU_AN+)>
+<!ELEMENT THAM_GIA_DU_AN (ma_tgda, ma_nv, ma_da, vai_tro, so_gio_tham_gia)>
+<!ELEMENT ma_tgda (#PCDATA)>
+<!ELEMENT vai_tro (#PCDATA)>
+<!ELEMENT so_gio_tham_gia (#PCDATA)>

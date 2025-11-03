@@ -1,0 +1,54 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Chức Vụ",
+    "description": "Schema cho bảng chức vụ trong hệ thống quản lý nhân sự.",
+    "type": "object",
+    "properties": {
+        "DS_CHUC_VU": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "#/$defs/CHUC_VU"
+            }
+        }
+    },
+    "required": [
+        "DS_CHUC_VU"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "CHUC_VU": {
+            "title": "Chức Vụ",
+            "type": "object",
+            "properties": {
+                "ma_cv": {
+                    "type": "string",
+                    "pattern": "^CV[0-9]{6}$"
+                },
+                "ten_chuc_vu": {
+                    "type": "string",
+                    "enum": [
+                        "Giám đốc",
+                        "Phó giám đốc",
+                        "Trưởng phòng",
+                        "Phó phòng",
+                        "Nhân viên",
+                        "Thực tập sinh"
+                    ]
+                },
+                "luong_co_ban": {
+                    "type": "integer",
+                    "minimum": 5000000,
+                    "maximum": 200000000,
+                    "multipleOf": 100000
+                }
+            },
+            "required": [
+                "ma_cv",
+                "ten_chuc_vu",
+                "luong_co_ban"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

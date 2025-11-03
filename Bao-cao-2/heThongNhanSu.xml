@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="heThongNhanSu.xsl"?>
+
+<!DOCTYPE HE_THONG_NHAN_SU SYSTEM "heThongNhanSu.dtd">
+<HE_THONG_NHAN_SU>
+  <DS_BANG_LUONG>
+    <BANG_LUONG>
+      <ma_bl>BL000001</ma_bl>
+      <ma_qtlv>QTLV000001</ma_qtlv>
+      <ma_cc>CC000001</ma_cc>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <luong_co_ban>5500000</luong_co_ban>
+      <phu_cap>1100000</phu_cap>
+      <tien_tang_ca>1050000</tien_tang_ca>
+      <tong_luong>7650000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+      <ma_bl>BL000002</ma_bl>
+      <ma_qtlv>QTLV000002</ma_qtlv>
+      <ma_cc>CC000002</ma_cc>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <luong_co_ban>6000000</luong_co_ban>
+      <phu_cap>1200000</phu_cap>
+      <tien_tang_ca>1100000</tien_tang_ca>
+      <tong_luong>8300000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+      <ma_bl>BL000003</ma_bl>
+      <ma_qtlv>QTLV000003</ma_qtlv>
+      <ma_cc>CC000003</ma_cc>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <luong_co_ban>6500000</luong_co_ban>
+      <phu_cap>1300000</phu_cap>
+      <tien_tang_ca>1150000</tien_tang_ca>
+      <tong_luong>8950000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+      <ma_bl>BL000004</ma_bl>
+      <ma_qtlv>QTLV000004</ma_qtlv>
+      <ma_cc>CC000004</ma_cc>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <luong_co_ban>7000000</luong_co_ban>
+      <phu_cap>1400000</phu_cap>
+      <tien_tang_ca>1200000</tien_tang_ca>
+      <tong_luong>9600000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+      <ma_bl>BL000005</ma_bl>
+      <ma_qtlv>QTLV000005</ma_qtlv>
+      <ma_cc>CC000005</ma_cc>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <luong_co_ban>7500000</luong_co_ban>
+      <phu_cap>1500000</phu_cap>
+      <tien_tang_ca>1250000</tien_tang_ca>
+      <tong_luong>10250000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+      <ma_bl>BL000006</ma_bl>
+      <ma_qtlv>QTLV000006</ma_qtlv>
+      <ma_cc>CC000006</ma_cc>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <luong_co_ban>8000000</luong_co_ban>
+      <phu_cap>1600000</phu_cap>
+      <tien_tang_ca>1300000</tien_tang_ca>
+      <tong_luong>10900000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+      <ma_bl>BL000007</ma_bl>
+      <ma_qtlv>QTLV000007</ma_qtlv>
+      <ma_cc>CC000007</ma_cc>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <luong_co_ban>8500000</luong_co_ban>
+      <phu_cap>1700000</phu_cap>
+      <tien_tang_ca>1350000</tien_tang_ca>
+      <tong_luong>11550000</tong_luong>
+    </BANG_LUONG>
+    <BANG_LUONG>
+      <ma_bl>BL000008</ma_bl>
+      <ma_qtlv>QTLV000008</ma_qtlv>
+      <ma_cc>CC000008</ma_cc>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <luong_co_ban>9000000</luong_co_ban>
+      <phu_cap>1800000</phu_cap>
+      <tien_tang_ca>1400000</tien_tang_ca>
+      <tong_luong>12200000</tong_luong>
+    </BANG_LUONG>
+  </DS_BANG_LUONG>
+  <DS_CHAM_CONG>
+    <CHAM_CONG>
+      <ma_cc>CC000001</ma_cc>
+      <ma_qtlv>QTLV000001</ma_qtlv>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <so_ngay_cong>21</so_ngay_cong>
+      <so_gio_tang_ca>6</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+      <ma_cc>CC000002</ma_cc>
+      <ma_qtlv>QTLV000002</ma_qtlv>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <so_ngay_cong>22</so_ngay_cong>
+      <so_gio_tang_ca>7</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+      <ma_cc>CC000003</ma_cc>
+      <ma_qtlv>QTLV000003</ma_qtlv>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <so_ngay_cong>23</so_ngay_cong>
+      <so_gio_tang_ca>8</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+      <ma_cc>CC000004</ma_cc>
+      <ma_qtlv>QTLV000004</ma_qtlv>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <so_ngay_cong>24</so_ngay_cong>
+      <so_gio_tang_ca>9</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+      <ma_cc>CC000005</ma_cc>
+      <ma_qtlv>QTLV000005</ma_qtlv>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <so_ngay_cong>20</so_ngay_cong>
+      <so_gio_tang_ca>10</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+      <ma_cc>CC000006</ma_cc>
+      <ma_qtlv>QTLV000006</ma_qtlv>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <so_ngay_cong>21</so_ngay_cong>
+      <so_gio_tang_ca>11</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+      <ma_cc>CC000007</ma_cc>
+      <ma_qtlv>QTLV000007</ma_qtlv>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <so_ngay_cong>22</so_ngay_cong>
+      <so_gio_tang_ca>12</so_gio_tang_ca>
+    </CHAM_CONG>
+    <CHAM_CONG>
+      <ma_cc>CC000008</ma_cc>
+      <ma_qtlv>QTLV000008</ma_qtlv>
+      <thang>10</thang>
+      <nam>2025</nam>
+      <so_ngay_cong>23</so_ngay_cong>
+      <so_gio_tang_ca>13</so_gio_tang_ca>
+    </CHAM_CONG>
+  </DS_CHAM_CONG>
+  <DS_CHUC_VU>
+    <CHUC_VU>
+      <ma_cv>CV000001</ma_cv>
+      <ten_chuc_vu>Giám đốc</ten_chuc_vu>
+      <luong_co_ban>5500000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+      <ma_cv>CV000002</ma_cv>
+      <ten_chuc_vu>Phó giám đốc</ten_chuc_vu>
+      <luong_co_ban>6000000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+      <ma_cv>CV000003</ma_cv>
+      <ten_chuc_vu>Trưởng phòng</ten_chuc_vu>
+      <luong_co_ban>6500000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+      <ma_cv>CV000004</ma_cv>
+      <ten_chuc_vu>Phó phòng</ten_chuc_vu>
+      <luong_co_ban>7000000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+      <ma_cv>CV000005</ma_cv>
+      <ten_chuc_vu>Nhân viên</ten_chuc_vu>
+      <luong_co_ban>7500000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+      <ma_cv>CV000006</ma_cv>
+      <ten_chuc_vu>Thực tập sinh</ten_chuc_vu>
+      <luong_co_ban>8000000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+      <ma_cv>CV000007</ma_cv>
+      <ten_chuc_vu>Giám đốc</ten_chuc_vu>
+      <luong_co_ban>8500000</luong_co_ban>
+    </CHUC_VU>
+    <CHUC_VU>
+      <ma_cv>CV000008</ma_cv>
+      <ten_chuc_vu>Phó giám đốc</ten_chuc_vu>
+      <luong_co_ban>9000000</luong_co_ban>
+    </CHUC_VU>
+  </DS_CHUC_VU>
+  <DS_DU_AN>
+    <DU_AN>
+      <ma_da>DA000001</ma_da>
+      <ten_du_an>Dự án 1</ten_du_an>
+      <ngay_bat_dau>2023-02-01</ngay_bat_dau>
+      <ngay_ket_thuc>2024-02-15</ngay_ket_thuc>
+      <mo_ta>Mô tả dự án 1</mo_ta>
+    </DU_AN>
+    <DU_AN>
+      <ma_da>DA000002</ma_da>
+      <ten_du_an>Dự án 2</ten_du_an>
+      <ngay_bat_dau>2023-03-01</ngay_bat_dau>
+      <ngay_ket_thuc>2024-03-15</ngay_ket_thuc>
+      <mo_ta>Mô tả dự án 2</mo_ta>
+    </DU_AN>
+    <DU_AN>
+      <ma_da>DA000003</ma_da>
+      <ten_du_an>Dự án 3</ten_du_an>
+      <ngay_bat_dau>2023-04-01</ngay_bat_dau>
+      <ngay_ket_thuc>2024-04-15</ngay_ket_thuc>
+      <mo_ta>Mô tả dự án 3</mo_ta>
+    </DU_AN>
+    <DU_AN>
+      <ma_da>DA000004</ma_da>
+      <ten_du_an>Dự án 4</ten_du_an>
+      <ngay_bat_dau>2023-05-01</ngay_bat_dau>
+      <ngay_ket_thuc>2024-05-15</ngay_ket_thuc>
+      <mo_ta>Mô tả dự án 4</mo_ta>
+    </DU_AN>
+    <DU_AN>
+      <ma_da>DA000005</ma_da>
+      <ten_du_an>Dự án 5</ten_du_an>
+      <ngay_bat_dau>2023-06-01</ngay_bat_dau>
+      <ngay_ket_thuc>2024-06-15</ngay_ket_thuc>
+      <mo_ta>Mô tả dự án 5</mo_ta>
+    </DU_AN>
+    <DU_AN>
+      <ma_da>DA000006</ma_da>
+      <ten_du_an>Dự án 6</ten_du_an>
+      <ngay_bat_dau>2023-07-01</ngay_bat_dau>
+      <ngay_ket_thuc>2024-07-15</ngay_ket_thuc>
+      <mo_ta>Mô tả dự án 6</mo_ta>
+    </DU_AN>
+    <DU_AN>
+      <ma_da>DA000007</ma_da>
+      <ten_du_an>Dự án 7</ten_du_an>
+      <ngay_bat_dau>2023-08-01</ngay_bat_dau>
+      <ngay_ket_thuc>2024-08-15</ngay_ket_thuc>
+      <mo_ta>Mô tả dự án 7</mo_ta>
+    </DU_AN>
+    <DU_AN>
+      <ma_da>DA000008</ma_da>
+      <ten_du_an>Dự án 8</ten_du_an>
+      <ngay_bat_dau>2023-09-01</ngay_bat_dau>
+      <ngay_ket_thuc>2024-09-15</ngay_ket_thuc>
+      <mo_ta>Mô tả dự án 8</mo_ta>
+    </DU_AN>
+  </DS_DU_AN>
+  <DS_NHAN_VIEN>
+    <NHAN_VIEN>
+      <ma_nv>NV000001</ma_nv>
+      <ho_ten>Nguyễn Văn A</ho_ten>
+      <ngay_sinh>1981-02-02</ngay_sinh>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi>Số 1 Đường B, Thành phố</dia_chi>
+      <email>user1@company.com</email>
+      <so_dien_thoai>0900000001</so_dien_thoai>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+      <ma_nv>NV000002</ma_nv>
+      <ho_ten>Nguyễn Văn B</ho_ten>
+      <ngay_sinh>1982-03-03</ngay_sinh>
+      <gioi_tinh>false</gioi_tinh>
+      <dia_chi>Số 2 Đường B, Thành phố</dia_chi>
+      <email>user2@company.com</email>
+      <so_dien_thoai>0900000002</so_dien_thoai>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+      <ma_nv>NV000003</ma_nv>
+      <ho_ten>Nguyễn Văn C</ho_ten>
+      <ngay_sinh>1983-04-04</ngay_sinh>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi>Số 3 Đường B, Thành phố</dia_chi>
+      <email>user3@company.com</email>
+      <so_dien_thoai>0900000003</so_dien_thoai>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+      <ma_nv>NV000004</ma_nv>
+      <ho_ten>Nguyễn Văn D</ho_ten>
+      <ngay_sinh>1984-05-05</ngay_sinh>
+      <gioi_tinh>false</gioi_tinh>
+      <dia_chi>Số 4 Đường B, Thành phố</dia_chi>
+      <email>user4@company.com</email>
+      <so_dien_thoai>0900000004</so_dien_thoai>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+      <ma_nv>NV000005</ma_nv>
+      <ho_ten>Nguyễn Văn E</ho_ten>
+      <ngay_sinh>1985-06-06</ngay_sinh>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi>Số 5 Đường B, Thành phố</dia_chi>
+      <email>user5@company.com</email>
+      <so_dien_thoai>0900000005</so_dien_thoai>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+      <ma_nv>NV000006</ma_nv>
+      <ho_ten>Nguyễn Văn F</ho_ten>
+      <ngay_sinh>1986-07-07</ngay_sinh>
+      <gioi_tinh>false</gioi_tinh>
+      <dia_chi>Số 6 Đường B, Thành phố</dia_chi>
+      <email>user6@company.com</email>
+      <so_dien_thoai>0900000006</so_dien_thoai>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+      <ma_nv>NV000007</ma_nv>
+      <ho_ten>Nguyễn Văn G</ho_ten>
+      <ngay_sinh>1987-08-08</ngay_sinh>
+      <gioi_tinh>true</gioi_tinh>
+      <dia_chi>Số 7 Đường B, Thành phố</dia_chi>
+      <email>user7@company.com</email>
+      <so_dien_thoai>0900000007</so_dien_thoai>
+    </NHAN_VIEN>
+    <NHAN_VIEN>
+      <ma_nv>NV000008</ma_nv>
+      <ho_ten>Nguyễn Văn H</ho_ten>
+      <ngay_sinh>1988-09-09</ngay_sinh>
+      <gioi_tinh>false</gioi_tinh>
+      <dia_chi>Số 8 Đường B, Thành phố</dia_chi>
+      <email>user8@company.com</email>
+      <so_dien_thoai>0900000008</so_dien_thoai>
+    </NHAN_VIEN>
+  </DS_NHAN_VIEN>
+  <DS_PHONG_BAN>
+    <PHONG_BAN>
+      <ma_pb>PB000001</ma_pb>
+      <ten_phong_ban>Kế toán</ten_phong_ban>
+      <dia_chi>Số 1 Đường A, Quận 1</dia_chi>
+      <so_dien_thoai>0900000001</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+      <ma_pb>PB000002</ma_pb>
+      <ten_phong_ban>Nhân sự</ten_phong_ban>
+      <dia_chi>Số 2 Đường A, Quận 2</dia_chi>
+      <so_dien_thoai>0900000002</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+      <ma_pb>PB000003</ma_pb>
+      <ten_phong_ban>IT</ten_phong_ban>
+      <dia_chi>Số 3 Đường A, Quận 3</dia_chi>
+      <so_dien_thoai>0900000003</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+      <ma_pb>PB000004</ma_pb>
+      <ten_phong_ban>Kinh doanh</ten_phong_ban>
+      <dia_chi>Số 4 Đường A, Quận 4</dia_chi>
+      <so_dien_thoai>0900000004</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+      <ma_pb>PB000005</ma_pb>
+      <ten_phong_ban>Kế toán</ten_phong_ban>
+      <dia_chi>Số 5 Đường A, Quận 5</dia_chi>
+      <so_dien_thoai>0900000005</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+      <ma_pb>PB000006</ma_pb>
+      <ten_phong_ban>Nhân sự</ten_phong_ban>
+      <dia_chi>Số 6 Đường A, Quận 6</dia_chi>
+      <so_dien_thoai>0900000006</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+      <ma_pb>PB000007</ma_pb>
+      <ten_phong_ban>IT</ten_phong_ban>
+      <dia_chi>Số 7 Đường A, Quận 7</dia_chi>
+      <so_dien_thoai>0900000007</so_dien_thoai>
+    </PHONG_BAN>
+    <PHONG_BAN>
+      <ma_pb>PB000008</ma_pb>
+      <ten_phong_ban>Kinh doanh</ten_phong_ban>
+      <dia_chi>Số 8 Đường A, Quận 8</dia_chi>
+      <so_dien_thoai>0900000008</so_dien_thoai>
+    </PHONG_BAN>
+  </DS_PHONG_BAN>
+  <DS_QTLV>
+    <QTLV>
+      <ma_qtlv>QTLV000001</ma_qtlv>
+      <ma_nv>NV000001</ma_nv>
+      <ma_pb>PB000001</ma_pb>
+      <ma_cv>CV000001</ma_cv>
+      <ngay_bat_dau>2020-01-02</ngay_bat_dau>
+      <ngay_ket_thuc>2022-12-12</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+      <ma_qtlv>QTLV000002</ma_qtlv>
+      <ma_nv>NV000002</ma_nv>
+      <ma_pb>PB000002</ma_pb>
+      <ma_cv>CV000002</ma_cv>
+      <ngay_bat_dau>2020-01-03</ngay_bat_dau>
+      <ngay_ket_thuc>2022-12-13</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+      <ma_qtlv>QTLV000003</ma_qtlv>
+      <ma_nv>NV000003</ma_nv>
+      <ma_pb>PB000003</ma_pb>
+      <ma_cv>CV000003</ma_cv>
+      <ngay_bat_dau>2020-01-04</ngay_bat_dau>
+      <ngay_ket_thuc>2022-12-14</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+      <ma_qtlv>QTLV000004</ma_qtlv>
+      <ma_nv>NV000004</ma_nv>
+      <ma_pb>PB000004</ma_pb>
+      <ma_cv>CV000004</ma_cv>
+      <ngay_bat_dau>2020-01-05</ngay_bat_dau>
+      <ngay_ket_thuc>2022-12-15</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+      <ma_qtlv>QTLV000005</ma_qtlv>
+      <ma_nv>NV000005</ma_nv>
+      <ma_pb>PB000005</ma_pb>
+      <ma_cv>CV000005</ma_cv>
+      <ngay_bat_dau>2020-01-06</ngay_bat_dau>
+      <ngay_ket_thuc>2022-12-16</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+      <ma_qtlv>QTLV000006</ma_qtlv>
+      <ma_nv>NV000006</ma_nv>
+      <ma_pb>PB000006</ma_pb>
+      <ma_cv>CV000006</ma_cv>
+      <ngay_bat_dau>2020-01-07</ngay_bat_dau>
+      <ngay_ket_thuc>2022-12-17</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+      <ma_qtlv>QTLV000007</ma_qtlv>
+      <ma_nv>NV000007</ma_nv>
+      <ma_pb>PB000007</ma_pb>
+      <ma_cv>CV000007</ma_cv>
+      <ngay_bat_dau>2020-01-08</ngay_bat_dau>
+      <ngay_ket_thuc>2022-12-18</ngay_ket_thuc>
+    </QTLV>
+    <QTLV>
+      <ma_qtlv>QTLV000008</ma_qtlv>
+      <ma_nv>NV000008</ma_nv>
+      <ma_pb>PB000008</ma_pb>
+      <ma_cv>CV000008</ma_cv>
+      <ngay_bat_dau>2020-01-09</ngay_bat_dau>
+      <ngay_ket_thuc>2022-12-19</ngay_ket_thuc>
+    </QTLV>
+  </DS_QTLV>
+  <DS_THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+      <ma_tgda>TGDA000001</ma_tgda>
+      <ma_nv>NV000001</ma_nv>
+      <ma_da>DA000001</ma_da>
+      <vai_tro>Thành viên</vai_tro>
+      <so_gio_tham_gia>11</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+      <ma_tgda>TGDA000002</ma_tgda>
+      <ma_nv>NV000002</ma_nv>
+      <ma_da>DA000002</ma_da>
+      <vai_tro>Thành viên</vai_tro>
+      <so_gio_tham_gia>12</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+      <ma_tgda>TGDA000003</ma_tgda>
+      <ma_nv>NV000003</ma_nv>
+      <ma_da>DA000003</ma_da>
+      <vai_tro>Thành viên</vai_tro>
+      <so_gio_tham_gia>13</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+      <ma_tgda>TGDA000004</ma_tgda>
+      <ma_nv>NV000004</ma_nv>
+      <ma_da>DA000004</ma_da>
+      <vai_tro>Thành viên</vai_tro>
+      <so_gio_tham_gia>14</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+      <ma_tgda>TGDA000005</ma_tgda>
+      <ma_nv>NV000005</ma_nv>
+      <ma_da>DA000005</ma_da>
+      <vai_tro>Thành viên</vai_tro>
+      <so_gio_tham_gia>15</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+      <ma_tgda>TGDA000006</ma_tgda>
+      <ma_nv>NV000006</ma_nv>
+      <ma_da>DA000006</ma_da>
+      <vai_tro>Thành viên</vai_tro>
+      <so_gio_tham_gia>16</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+      <ma_tgda>TGDA000007</ma_tgda>
+      <ma_nv>NV000007</ma_nv>
+      <ma_da>DA000007</ma_da>
+      <vai_tro>Thành viên</vai_tro>
+      <so_gio_tham_gia>17</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+    <THAM_GIA_DU_AN>
+      <ma_tgda>TGDA000008</ma_tgda>
+      <ma_nv>NV000008</ma_nv>
+      <ma_da>DA000008</ma_da>
+      <vai_tro>Thành viên</vai_tro>
+      <so_gio_tham_gia>18</so_gio_tham_gia>
+    </THAM_GIA_DU_AN>
+  </DS_THAM_GIA_DU_AN>
+</HE_THONG_NHAN_SU>

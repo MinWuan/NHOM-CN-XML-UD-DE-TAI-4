@@ -1,0 +1,68 @@
+{
+  "DS_QTLV": [
+    {
+      "ma_qtlv": "QTLV000001",
+      "ma_nv": "NV000001",
+      "ma_pb": "PB000001",
+      "ma_cv": "CV000001",
+      "ngay_bat_dau": "2020-01-02",
+      "ngay_ket_thuc": "2022-12-12"
+    },
+    {
+      "ma_qtlv": "QTLV000002",
+      "ma_nv": "NV000002",
+      "ma_pb": "PB000002",
+      "ma_cv": "CV000002",
+      "ngay_bat_dau": "2020-01-03",
+      "ngay_ket_thuc": "2022-12-13"
+    },
+    {
+      "ma_qtlv": "QTLV000003",
+      "ma_nv": "NV000003",
+      "ma_pb": "PB000003",
+      "ma_cv": "CV000003",
+      "ngay_bat_dau": "2020-01-04",
+      "ngay_ket_thuc": "2022-12-14"
+    },
+    {
+      "ma_qtlv": "QTLV000004",
+      "ma_nv": "NV000004",
+      "ma_pb": "PB000004",
+      "ma_cv": "CV000004",
+      "ngay_bat_dau": "2020-01-05",
+      "ngay_ket_thuc": "2022-12-15"
+    },
+    {
+      "ma_qtlv": "QTLV000005",
+      "ma_nv": "NV000005",
+      "ma_pb": "PB000005",
+      "ma_cv": "CV000005",
+      "ngay_bat_dau": "2020-01-06",
+      "ngay_ket_thuc": "2022-12-16"
+    },
+    {
+      "ma_qtlv": "QTLV000006",
+      "ma_nv": "NV000006",
+      "ma_pb": "PB000006",
+      "ma_cv": "CV000006",
+      "ngay_bat_dau": "2020-01-07",
+      "ngay_ket_thuc": "2022-12-17"
+    },
+    {
+      "ma_qtlv": "QTLV000007",
+      "ma_nv": "NV000007",
+      "ma_pb": "PB000007",
+      "ma_cv": "CV000007",
+      "ngay_bat_dau": "2020-01-08",
+      "ngay_ket_thuc": "2022-12-18"
+    },
+    {
+      "ma_qtlv": "QTLV000008",
+      "ma_nv": "NV000008",
+      "ma_pb": "PB000008",
+      "ma_cv": "CV000008",
+      "ngay_bat_dau": "2020-01-09",
+      "ngay_ket_thuc": "2022-12-19"
+    }
+  ]
+}

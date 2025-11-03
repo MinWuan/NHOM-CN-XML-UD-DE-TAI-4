@@ -1,0 +1,97 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Chấm Công",
+    "description": "Schema cho bảng chấm công nhân viên trong hệ thống quản lý chấm công.",
+    "type": "object",
+    "properties": {
+        "DS_CHAM_CONG": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "#/$defs/CHAM_CONG"
+            }
+        }
+    },
+    "required": [
+        "DS_CHAM_CONG"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "CHAM_CONG": {
+            "type": "object",
+            "properties": {
+                "ma_cc": {
+                    "type": "string",
+                    "pattern": "^CC[0-9]{6}$",
+                    "description": "Mã chấm công, bắt đầu bằng 'CC' theo sau là 6 chữ số.",
+                    "examples": [
+                        "CC000001",
+                        "CC000123"
+                    ]
+                },
+                "ma_qtlv": {
+                    "type": "string",
+                    "pattern": "^QTLV[0-9]{6}$",
+                    "description": "Mã quá trình làm việc, bắt đầu bằng 'QTLV' theo sau là 6 chữ số.",
+                    "examples": [
+                        "QTLV000001",
+                        "QTLV000456"
+                    ]
+                },
+                "thang": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 12,
+                    "description": "Tháng trong năm, giá trị từ 1 đến 12.",
+                    "examples": [
+                        1,
+                        6,
+                        12
+                    ]
+                },
+                "nam": {
+                    "type": "integer",
+                    "minimum": 2000,
+                    "maximum": 2100,
+                    "description": "Năm, giá trị từ 2000 đến 2100.",
+                    "examples": [
+                        2023,
+                        2050
+                    ]
+                },
+                "so_ngay_cong": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 31,
+                    "description": "Số ngày công trong tháng, giá trị từ 0 đến 31.",
+                    "examples": [
+                        0,
+                        15,
+                        31
+                    ]
+                },
+                "so_gio_tang_ca": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 300,
+                    "multipleOf": 0.5,
+                    "description": "Số giờ tăng ca, giá trị từ 0 đến 300, bội số của 0.5.",
+                    "examples": [
+                        0,
+                        1.5,
+                        300
+                    ]
+                }
+            },
+            "required": [
+                "ma_cc",
+                "ma_qtlv",
+                "thang",
+                "nam",
+                "so_ngay_cong",
+                "so_gio_tang_ca"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

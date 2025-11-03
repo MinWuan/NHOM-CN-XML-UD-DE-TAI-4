@@ -1,0 +1,68 @@
+{
+  "DS_CHAM_CONG": [
+    {
+      "ma_cc": "CC000001",
+      "ma_qtlv": "QTLV000001",
+      "thang": 10,
+      "nam": 2025,
+      "so_ngay_cong": 21,
+      "so_gio_tang_ca": 6
+    },
+    {
+      "ma_cc": "CC000002",
+      "ma_qtlv": "QTLV000002",
+      "thang": 10,
+      "nam": 2025,
+      "so_ngay_cong": 22,
+      "so_gio_tang_ca": 7
+    },
+    {
+      "ma_cc": "CC000003",
+      "ma_qtlv": "QTLV000003",
+      "thang": 10,
+      "nam": 2025,
+      "so_ngay_cong": 23,
+      "so_gio_tang_ca": 8
+    },
+    {
+      "ma_cc": "CC000004",
+      "ma_qtlv": "QTLV000004",
+      "thang": 10,
+      "nam": 2025,
+      "so_ngay_cong": 24,
+      "so_gio_tang_ca": 9
+    },
+    {
+      "ma_cc": "CC000005",
+      "ma_qtlv": "QTLV000005",
+      "thang": 10,
+      "nam": 2025,
+      "so_ngay_cong": 20,
+      "so_gio_tang_ca": 10
+    },
+    {
+      "ma_cc": "CC000006",
+      "ma_qtlv": "QTLV000006",
+      "thang": 10,
+      "nam": 2025,
+      "so_ngay_cong": 21,
+      "so_gio_tang_ca": 11
+    },
+    {
+      "ma_cc": "CC000007",
+      "ma_qtlv": "QTLV000007",
+      "thang": 10,
+      "nam": 2025,
+      "so_ngay_cong": 22,
+      "so_gio_tang_ca": 12
+    },
+    {
+      "ma_cc": "CC000008",
+      "ma_qtlv": "QTLV000008",
+      "thang": 10,
+      "nam": 2025,
+      "so_ngay_cong": 23,
+      "so_gio_tang_ca": 13
+    }
+  ]
+}

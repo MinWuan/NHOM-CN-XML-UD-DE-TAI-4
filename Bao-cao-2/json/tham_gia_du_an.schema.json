@@ -1,0 +1,88 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Tham Gia Dự Án",
+    "type": "object",
+    "properties": {
+        "DS_THAM_GIA_DU_AN": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "#/$defs/THAM_GIA_DU_AN"
+            }
+        }
+    },
+    "required": [
+        "DS_THAM_GIA_DU_AN"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "THAM_GIA_DU_AN": {
+            "type": "object",
+            "properties": {
+                "ma_tgda": {
+                    "type": "string",
+                    "pattern": "^TGDA[0-9]{6}$",
+                    "description": "Mã tham gia dự án, bắt đầu bằng 'TGDA' theo sau là 6 chữ số.",
+                    "examples": [
+                        "TGDA000001",
+                        "TGDA000123"
+                    ]
+                },
+                "ma_nv": {
+                    "type": "string",
+                    "pattern": "^NV[0-9]{6}$",
+                    "description": "Mã nhân viên, bắt đầu bằng 'NV' theo sau là 6 chữ số.",
+                    "examples": [
+                        "NV000001",
+                        "NV000045"
+                    ]
+                },
+                "ma_da": {
+                    "type": "string",
+                    "pattern": "^DA[0-9]{6}$",
+                    "description": "Mã dự án, bắt đầu bằng 'DA' theo sau là 6 chữ số.",
+                    "examples": [
+                        "DA000001",
+                        "DA000789"
+                    ]
+                },
+                "vai_tro": {
+                    "type": "string",
+                    "enum": [
+                        "Thành viên",
+                        "Quản lý",
+                        "Phát triển",
+                        "Tester",
+                        "Thiết kế",
+                        "Tư vấn",
+                        "Kế toán",
+                        "Phần mềm"
+                    ],
+                    "description": "Vai trò của nhân viên trong dự án.",
+                    "examples": [
+                        "Thành viên",
+                        "Quản lý"
+                    ]
+                },
+                "so_gio_tham_gia": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 2000,
+                    "description": "Số giờ tham gia dự án, giá trị từ 1 đến 2000.",
+                    "examples": [
+                        11,
+                        1500
+                    ]
+                }
+            },
+            "required": [
+                "ma_tgda",
+                "ma_nv",
+                "ma_da",
+                "vai_tro",
+                "so_gio_tham_gia"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

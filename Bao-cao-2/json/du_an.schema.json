@@ -1,0 +1,82 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Dự Án",
+    "description": "Schema cho bảng dự án trong hệ thống quản lý dự án.",
+    "type": "object",
+    "properties": {
+        "DS_DU_AN": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "#/$defs/DU_AN"
+            }
+        }
+    },
+    "required": [
+        "DS_DU_AN"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "DU_AN": {
+            "type": "object",
+            "properties": {
+                "ma_da": {
+                    "type": "string",
+                    "pattern": "^DA[0-9]{6}$",
+                    "description": "Mã dự án, bắt đầu bằng 'DA' theo sau là 6 chữ số.",
+                    "examples": [
+                        "DA000001",
+                        "DA000002",
+                        "DA000003"
+                    ]
+                },
+                "ten_du_an": {
+                    "type": "string",
+                    "minLength": 5,
+                    "maxLength": 150,
+                    "description": "Tên dự án, độ dài từ 5 đến 150 ký tự.",
+                    "examples": [
+                        "Dự án 1",
+                        "Dự án 2",
+                        "Dự án 3"
+                    ]
+                },
+                "ngay_bat_dau": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Ngày bắt đầu dự án, định dạng ngày (YYYY-MM-DD).",
+                    "examples": [
+                        "2023-02-01",
+                        "2023-03-01"
+                    ]
+                },
+                "ngay_ket_thuc": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Ngày kết thúc dự án, định dạng ngày (YYYY-MM-DD).",
+                    "examples": [
+                        "2024-02-15",
+                        "2024-03-15"
+                    ]
+                },
+                "mo_ta": {
+                    "type": "string",
+                    "maxLength": 1000,
+                    "description": "Mô tả dự án, tối đa 1000 ký tự.",
+                    "examples": [
+                        "Mô tả dự án 1",
+                        "Mô tả dự án 2"
+                    ]
+                }
+            },
+            "required": [
+                "ma_da",
+                "ten_du_an",
+                "ngay_bat_dau",
+                "ngay_ket_thuc",
+                "mo_ta"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

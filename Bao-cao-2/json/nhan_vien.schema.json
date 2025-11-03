@@ -1,0 +1,100 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Nhân Viên",
+    "type": "object",
+    "properties": {
+        "DS_NHAN_VIEN": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "#/$defs/NHAN_VIEN"
+            }
+        }
+    },
+    "required": [
+        "DS_NHAN_VIEN"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "NHAN_VIEN": {
+            "type": "object",
+            "properties": {
+                "ma_nv": {
+                    "type": "string",
+                    "pattern": "^NV\\d{6}$",
+                    "description": "Mã nhân viên, bắt đầu bằng 'NV' theo sau là 6 chữ số.",
+                    "examples": [
+                        "NV000001",
+                        "NV000123"
+                    ]
+                },
+                "ho_ten": {
+                    "type": "string",
+                    "minLength": 6,
+                    "maxLength": 80,
+                    "description": "Họ và tên của nhân viên, từ 6 đến 80 ký tự.",
+                    "examples": [
+                        "Nguyễn Văn A",
+                        "Trần Thị B"
+                    ]
+                },
+                "ngay_sinh": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Ngày sinh của nhân viên theo định dạng yyyy-MM-dd.",
+                    "examples": [
+                        "1981-02-02",
+                        "1982-03-03"
+                    ]
+                },
+                "gioi_tinh": {
+                    "type": "boolean",
+                    "description": "Giới tính của nhân viên, true là Nam, false là Nữ.",
+                    "examples": [
+                        true,
+                        false
+                    ]
+                },
+                "dia_chi": {
+                    "type": "string",
+                    "minLength": 5,
+                    "maxLength": 200,
+                    "description": "Địa chỉ của nhân viên, từ 5 đến 200 ký tự.",
+                    "examples": [
+                        "Số 1 Đường B, Thành phố",
+                        "Số 2 Đường B, Thành phố"
+                    ]
+                },
+                "so_dien_thoai": {
+                    "type": "string",
+                    "pattern": "^0\\d{9}$",
+                    "description": "Số điện thoại của nhân viên, gồm 10 chữ số và bắt đầu bằng số 0.",
+                    "examples": [
+                        "0900000001",
+                        "0900000002"
+                    ]
+                },
+                "email": {
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 100,
+                    "description": "Địa chỉ email của nhân viên, tối đa 100 ký tự.",
+                    "examples": [
+                        "user1@company.com",
+                        "user2@company.com"
+                    ]
+                }
+            },
+            "required": [
+                "ma_nv",
+                "ho_ten",
+                "ngay_sinh",
+                "gioi_tinh",
+                "email",
+                "so_dien_thoai",
+                "dia_chi"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

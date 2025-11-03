@@ -1,0 +1,92 @@
+{
+  "DS_BANG_LUONG": [
+    {
+      "ma_bl": "BL000001",
+      "ma_qtlv": "QTLV000001",
+      "ma_cc": "CC000001",
+      "thang": 10,
+      "nam": 2025,
+      "luong_co_ban": 5500000,
+      "phu_cap": 1100000,
+      "tien_tang_ca": 1050000,
+      "tong_luong": 7650000
+    },
+    {
+      "ma_bl": "BL000002",
+      "ma_qtlv": "QTLV000002",
+      "ma_cc": "CC000002",
+      "thang": 10,
+      "nam": 2025,
+      "luong_co_ban": 6000000,
+      "phu_cap": 1200000,
+      "tien_tang_ca": 1100000,
+      "tong_luong": 8300000
+    },
+    {
+      "ma_bl": "BL000003",
+      "ma_qtlv": "QTLV000003",
+      "ma_cc": "CC000003",
+      "thang": 10,
+      "nam": 2025,
+      "luong_co_ban": 6500000,
+      "phu_cap": 1300000,
+      "tien_tang_ca": 1150000,
+      "tong_luong": 8950000
+    },
+    {
+      "ma_bl": "BL000004",
+      "ma_qtlv": "QTLV000004",
+      "ma_cc": "CC000004",
+      "thang": 10,
+      "nam": 2025,
+      "luong_co_ban": 7000000,
+      "phu_cap": 1400000,
+      "tien_tang_ca": 1200000,
+      "tong_luong": 9600000
+    },
+    {
+      "ma_bl": "BL000005",
+      "ma_qtlv": "QTLV000005",
+      "ma_cc": "CC000005",
+      "thang": 10,
+      "nam": 2025,
+      "luong_co_ban": 7500000,
+      "phu_cap": 1500000,
+      "tien_tang_ca": 1250000,
+      "tong_luong": 10250000
+    },
+    {
+      "ma_bl": "BL000006",
+      "ma_qtlv": "QTLV000006",
+      "ma_cc": "CC000006",
+      "thang": 10,
+      "nam": 2025,
+      "luong_co_ban": 8000000,
+      "phu_cap": 1600000,
+      "tien_tang_ca": 1300000,
+      "tong_luong": 10900000
+    },
+    {
+      "ma_bl": "BL000007",
+      "ma_qtlv": "QTLV000007",
+      "ma_cc": "CC000007",
+      "thang": 10,
+      "nam": 2025,
+      "luong_co_ban": 8500000,
+      "phu_cap": 1700000,
+      "tien_tang_ca": 1350000,
+      "tong_luong": 11550000
+    },
+    {
+      "ma_bl": "BL000008",
+      "ma_qtlv": "QTLV000008",
+      "ma_cc": "CC000008",
+      "thang": 10,
+      "nam": 2025,
+      "luong_co_ban": 9000000,
+      "phu_cap": 1800000,
+      "tien_tang_ca": 1400000,
+      "tong_luong": 12200000
+    }
+  ]
+}

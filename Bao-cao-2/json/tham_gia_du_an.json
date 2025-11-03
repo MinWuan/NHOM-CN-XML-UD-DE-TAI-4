@@ -1,0 +1,60 @@
+{
+  "DS_THAM_GIA_DU_AN": [
+    {
+      "ma_tgda": "TGDA000001",
+      "ma_nv": "NV000001",
+      "ma_da": "DA000001",
+      "vai_tro": "Thành viên",
+      "so_gio_tham_gia": 11
+    },
+    {
+      "ma_tgda": "TGDA000002",
+      "ma_nv": "NV000002",
+      "ma_da": "DA000002",
+      "vai_tro": "Thành viên",
+      "so_gio_tham_gia": 12
+    },
+    {
+      "ma_tgda": "TGDA000003",
+      "ma_nv": "NV000003",
+      "ma_da": "DA000003",
+      "vai_tro": "Thành viên",
+      "so_gio_tham_gia": 13
+    },
+    {
+      "ma_tgda": "TGDA000004",
+      "ma_nv": "NV000004",
+      "ma_da": "DA000004",
+      "vai_tro": "Thành viên",
+      "so_gio_tham_gia": 14
+    },
+    {
+      "ma_tgda": "TGDA000005",
+      "ma_nv": "NV000005",
+      "ma_da": "DA000005",
+      "vai_tro": "Thành viên",
+      "so_gio_tham_gia": 15
+    },
+    {
+      "ma_tgda": "TGDA000006",
+      "ma_nv": "NV000006",
+      "ma_da": "DA000006",
+      "vai_tro": "Thành viên",
+      "so_gio_tham_gia": 16
+    },
+    {
+      "ma_tgda": "TGDA000007",
+      "ma_nv": "NV000007",
+      "ma_da": "DA000007",
+      "vai_tro": "Thành viên",
+      "so_gio_tham_gia": 17
+    },
+    {
+      "ma_tgda": "TGDA000008",
+      "ma_nv": "NV000008",
+      "ma_da": "DA000008",
+      "vai_tro": "Thành viên",
+      "so_gio_tham_gia": 18
+    }
+  ]
+}

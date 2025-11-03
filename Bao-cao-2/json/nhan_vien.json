@@ -1,0 +1,76 @@
+{
+  "DS_NHAN_VIEN": [
+    {
+      "ma_nv": "NV000001",
+      "ho_ten": "Nguyễn Văn A",
+      "ngay_sinh": "1981-02-02",
+      "gioi_tinh": true,
+      "dia_chi": "Số 1 Đường B, Thành phố",
+      "email": "user1@company.com",
+      "so_dien_thoai": "0900000001"
+    },
+    {
+      "ma_nv": "NV000002",
+      "ho_ten": "Nguyễn Văn B",
+      "ngay_sinh": "1982-03-03",
+      "gioi_tinh": false,
+      "dia_chi": "Số 2 Đường B, Thành phố",
+      "email": "user2@company.com",
+      "so_dien_thoai": "0900000002"
+    },
+    {
+      "ma_nv": "NV000003",
+      "ho_ten": "Nguyễn Văn C",
+      "ngay_sinh": "1983-04-04",
+      "gioi_tinh": true,
+      "dia_chi": "Số 3 Đường B, Thành phố",
+      "email": "user3@company.com",
+      "so_dien_thoai": "0900000003"
+    },
+    {
+      "ma_nv": "NV000004",
+      "ho_ten": "Nguyễn Văn D",
+      "ngay_sinh": "1984-05-05",
+      "gioi_tinh": false,
+      "dia_chi": "Số 4 Đường B, Thành phố",
+      "email": "user4@company.com",
+      "so_dien_thoai": "0900000004"
+    },
+    {
+      "ma_nv": "NV000005",
+      "ho_ten": "Nguyễn Văn E",
+      "ngay_sinh": "1985-06-06",
+      "gioi_tinh": true,
+      "dia_chi": "Số 5 Đường B, Thành phố",
+      "email": "user5@company.com",
+      "so_dien_thoai": "0900000005"
+    },
+    {
+      "ma_nv": "NV000006",
+      "ho_ten": "Nguyễn Văn F",
+      "ngay_sinh": "1986-07-07",
+      "gioi_tinh": false,
+      "dia_chi": "Số 6 Đường B, Thành phố",
+      "email": "user6@company.com",
+      "so_dien_thoai": "0900000006"
+    },
+    {
+      "ma_nv": "NV000007",
+      "ho_ten": "Nguyễn Văn G",
+      "ngay_sinh": "1987-08-08",
+      "gioi_tinh": true,
+      "dia_chi": "Số 7 Đường B, Thành phố",
+      "email": "user7@company.com",
+      "so_dien_thoai": "0900000007"
+    },
+    {
+      "ma_nv": "NV000008",
+      "ho_ten": "Nguyễn Văn H",
+      "ngay_sinh": "1988-09-09",
+      "gioi_tinh": false,
+      "dia_chi": "Số 8 Đường B, Thành phố",
+      "email": "user8@company.com",
+      "so_dien_thoai": "0900000008"
+    }
+  ]
+}

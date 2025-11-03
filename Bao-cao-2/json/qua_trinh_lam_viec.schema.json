@@ -1,0 +1,88 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Quá Trình Làm Việc",
+    "description": "Schema cho bảng quá trình làm việc trong hệ thống quản lý nhân sự.",
+    "type": "object",
+    "properties": {
+        "DS_QTLV": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "#/$defs/QTLV"
+            }
+        }
+    },
+    "required": [
+        "DS_QTLV"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "QTLV": {
+            "type": "object",
+            "properties": {
+                "ma_qtlv": {
+                    "type": "string",
+                    "pattern": "^QTLV[0-9]{6}$",
+                    "description": "Mã quá trình làm việc, bắt đầu bằng 'QTLV' theo sau là 6 chữ số.",
+                    "examples": [
+                        "QTLV000001",
+                        "QTLV123456"
+                    ]
+                },
+                "ma_nv": {
+                    "type": "string",
+                    "pattern": "^NV[0-9]{6}$",
+                    "description": "Mã nhân viên, bắt đầu bằng 'NV' theo sau là 6 chữ số.",
+                    "examples": [
+                        "NV000001",
+                        "NV123456"
+                    ]
+                },
+                "ma_pb": {
+                    "type": "string",
+                    "pattern": "^PB[0-9]{6}$",
+                    "description": "Mã phòng ban, bắt đầu bằng 'PB' theo sau là 6 chữ số.",
+                    "examples": [
+                        "PB000001",
+                        "PB123456"
+                    ]
+                },
+                "ma_cv": {
+                    "type": "string",
+                    "pattern": "^CV[0-9]{6}$",
+                    "description": "Mã chức vụ, bắt đầu bằng 'CV' theo sau là 6 chữ số.",
+                    "examples": [
+                        "CV000001",
+                        "CV123456"
+                    ]
+                },
+                "ngay_bat_dau": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Ngày bắt đầu làm việc, định dạng ngày (YYYY-MM-DD).",
+                    "examples": [
+                        "2020-01-02",
+                        "2022-05-15"
+                    ]
+                },
+                "ngay_ket_thuc": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Ngày kết thúc làm việc, định dạng ngày (YYYY-MM-DD).",
+                    "examples": [
+                        "2022-12-12",
+                        "2024-06-30"
+                    ]
+                }
+            },
+            "required": [
+                "ma_qtlv",
+                "ma_nv",
+                "ma_pb",
+                "ma_cv",
+                "ngay_bat_dau"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

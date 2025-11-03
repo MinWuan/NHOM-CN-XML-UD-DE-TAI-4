@@ -1,0 +1,52 @@
+{
+  "DS_PHONG_BAN": [
+    {
+      "ma_pb": "PB000001",
+      "ten_phong_ban": "Kế toán",
+      "dia_chi": "Số 1 Đường A, Quận 1",
+      "so_dien_thoai": "0900000001"
+    },
+    {
+      "ma_pb": "PB000002",
+      "ten_phong_ban": "Nhân sự",
+      "dia_chi": "Số 2 Đường A, Quận 2",
+      "so_dien_thoai": "0900000002"
+    },
+    {
+      "ma_pb": "PB000003",
+      "ten_phong_ban": "IT",
+      "dia_chi": "Số 3 Đường A, Quận 3",
+      "so_dien_thoai": "0900000003"
+    },
+    {
+      "ma_pb": "PB000004",
+      "ten_phong_ban": "Kinh doanh",
+      "dia_chi": "Số 4 Đường A, Quận 4",
+      "so_dien_thoai": "0900000004"
+    },
+    {
+      "ma_pb": "PB000005",
+      "ten_phong_ban": "Kế toán",
+      "dia_chi": "Số 5 Đường A, Quận 5",
+      "so_dien_thoai": "0900000005"
+    },
+    {
+      "ma_pb": "PB000006",
+      "ten_phong_ban": "Nhân sự",
+      "dia_chi": "Số 6 Đường A, Quận 6",
+      "so_dien_thoai": "0900000006"
+    },
+    {
+      "ma_pb": "PB000007",
+      "ten_phong_ban": "IT",
+      "dia_chi": "Số 7 Đường A, Quận 7",
+      "so_dien_thoai": "0900000007"
+    },
+    {
+      "ma_pb": "PB000008",
+      "ten_phong_ban": "Kinh doanh",
+      "dia_chi": "Số 8 Đường A, Quận 8",
+      "so_dien_thoai": "0900000008"
+    }
+  ]
+}

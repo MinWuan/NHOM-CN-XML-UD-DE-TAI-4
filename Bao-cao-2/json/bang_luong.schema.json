@@ -1,0 +1,134 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Bảng Lương",
+    "description": "Schema cho bảng lương nhân viên trong hệ thống quản lý nhân sự.",
+    "type": "object",
+    "properties": {
+        "DS_BANG_LUONG": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "#/$defs/BANG_LUONG"
+            }
+        }
+    },
+    "required": [
+        "DS_BANG_LUONG"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "BANG_LUONG": {
+            "type": "object",
+            "properties": {
+                "ma_bl": {
+                    "type": "string",
+                    "pattern": "^BL[0-9]{6}$",
+                    "examples": [
+                        "BL000001",
+                        "BL000002",
+                        "BL000003"
+                    ],
+                    "description": "Mã bảng lương, bắt đầu bằng 'BL' theo sau là 6 chữ số."
+                },
+                "ma_qtlv": {
+                    "type": "string",
+                    "pattern": "^QTLV[0-9]{6}$",
+                    "examples": [
+                        "QTLV000001",
+                        "QTLV000002",
+                        "QTLV000003"
+                    ],
+                    "description": "Mã quá trình làm việc, bắt đầu bằng 'QTLV' theo sau là 6 chữ số."
+                },
+                "ma_cc": {
+                    "type": "string",
+                    "pattern": "^CC[0-9]{6}$",
+                    "examples": [
+                        "CC000001",
+                        "CC000002",
+                        "CC000003"
+                    ],
+                    "description": "Mã chấm công, bắt đầu bằng 'CC' theo sau là 6 chữ số."
+                },
+                "thang": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 12,
+                    "examples": [
+                        1,
+                        6,
+                        12
+                    ],
+                    "description": "Tháng trong năm, giá trị từ 1 đến 12."
+                },
+                "nam": {
+                    "type": "integer",
+                    "minimum": 2000,
+                    "maximum": 2100,
+                    "examples": [
+                        2023,
+                        2050,
+                        2100
+                    ],
+                    "description": "Năm, giá trị từ 2000 đến 2100."
+                },
+                "luong_co_ban": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "multipleOf": 1000,
+                    "examples": [
+                        5500000,
+                        6000000,
+                        6500000
+                    ],
+                    "description": "Lương cơ bản, giá trị tối thiểu là 0 và bội số của 1000."
+                },
+                "phu_cap": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "multipleOf": 1000,
+                    "examples": [
+                        1100000,
+                        1200000,
+                        1300000
+                    ],
+                    "description": "Phụ cấp, giá trị tối thiểu là 0 và bội số của 1000."
+                },
+                "tien_tang_ca": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "multipleOf": 1000,
+                    "examples": [
+                        1050000,
+                        1100000,
+                        1150000
+                    ],
+                    "description": "Tiền tăng ca, giá trị tối thiểu là 0 và bội số của 1000."
+                },
+                "tong_luong": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "multipleOf": 1000,
+                    "examples": [
+                        7650000,
+                        8300000,
+                        8950000
+                    ],
+                    "description": "Tổng lương, giá trị tối thiểu là 0 và bội số của 1000."
+                }
+            },
+            "required": [
+                "ma_bl",
+                "ma_qtlv",
+                "ma_cc",
+                "thang",
+                "nam",
+                "luong_co_ban",
+                "phu_cap",
+                "tien_tang_ca",
+                "tong_luong"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Phòng Ban",
+    "type": "object",
+    "properties": {
+        "DS_PHONG_BAN": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "#/$defs/PHONG_BAN"
+            }
+        }
+    },
+    "required": [
+        "DS_PHONG_BAN"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "PHONG_BAN": {
+            "type": "object",
+            "properties": {
+                "ma_pb": {
+                    "type": "string",
+                    "pattern": "^PB[0-9]{6}$",
+                    "description": "Mã phòng ban: PB000001, PB000002...",
+                    "examples": [
+                        "PB000001",
+                        "PB000002",
+                        "PB000003"
+                    ]
+                },
+                "ten_phong_ban": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 80,
+                    "description": "Tên của phòng ban, từ 2 đến 80 ký tự.",
+                    "examples": [
+                        "Kế toán",
+                        "Nhân sự",
+                        "IT",
+                        "Kinh doanh"
+                    ]
+                },
+                "dia_chi": {
+                    "type": "string",
+                    "minLength": 5,
+                    "maxLength": 200,
+                    "description": "Địa chỉ của phòng ban, từ 5 đến 200 ký tự.",
+                    "examples": [
+                        "Số 1 Đường A, Quận 1",
+                        "Số 2 Đường A, Quận 2"
+                    ]
+                },
+                "so_dien_thoai": {
+                    "type": "string",
+                    "pattern": "^0[0-9]{9}$",
+                    "description": "Số điện thoại hợp lệ tại Việt Nam, bắt đầu bằng 0 và có 10 chữ số.",
+                    "examples": [
+                        "0900000001",
+                        "0900000002",
+                        "0900000003"
+                    ]
+                }
+            },
+            "required": [
+                "ma_pb",
+                "ten_phong_ban",
+                "dia_chi",
+                "so_dien_thoai"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

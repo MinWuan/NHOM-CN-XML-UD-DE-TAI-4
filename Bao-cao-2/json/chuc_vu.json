@@ -1,0 +1,12 @@
+{
+  "DS_CHUC_VU": [
+    { "ma_cv": "CV000001", "ten_chuc_vu": "Giám đốc", "luong_co_ban": 5500000 },
+    { "ma_cv": "CV000002", "ten_chuc_vu": "Phó giám đốc", "luong_co_ban": 6000000 },
+    { "ma_cv": "CV000003", "ten_chuc_vu": "Trưởng phòng", "luong_co_ban": 6500000 },
+    { "ma_cv": "CV000004", "ten_chuc_vu": "Phó phòng", "luong_co_ban": 7000000 },
+    { "ma_cv": "CV000005", "ten_chuc_vu": "Nhân viên", "luong_co_ban": 7500000 },
+    { "ma_cv": "CV000006", "ten_chuc_vu": "Thực tập sinh", "luong_co_ban": 8000000 },
+    { "ma_cv": "CV000007", "ten_chuc_vu": "Giám đốc", "luong_co_ban": 8500000 },
+    { "ma_cv": "CV000008", "ten_chuc_vu": "Phó giám đốc", "luong_co_ban": 9000000 }
+  ]
+}
